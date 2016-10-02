@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script type="text/javascript" async="" src="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/analytics.js.download"></script><script async="" src="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/gtm.js.download"></script><script async="" src="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/fbevents.js.download"></script><script src="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/jquery.min.js.download"></script>
+		<link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/bootstrap.css"><link rel="stylesheet" type="text/css" media="all" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/color-theme.css"><link rel="stylesheet" type="text/css" media="all" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/webslidemenu.css"><link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/font-awesome.min.css"><link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/owl.carousel.css"><link rel="stylesheet" type="text/css" media="all" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/t3h.css"><link rel="stylesheet" type="text/css" media="all" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/t3h.nganh.css"><link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/owl.theme.css"><link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/owl.transitions.css">
+		<link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/circle.css">
+    <link rel="stylesheet" href="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/TimeCircles.css">    
+    <style>
+        .dich-vu a {
+            color: #565555;
+        }
+        .dich-vu a:hover {
+            color: red;
+        }
+        .tin-tuc .tieu_de {
+            bottom: 0px;
+            transition: none;
+        }
+        .tin-tuc .tin-chinh {
+            max-height: 435px;
+            width: 100%;
+        }
+        .tin-tuc .tin-phu {
+            max-height: 210px;
+            width: 100%;
+        }
+        .tin-tuc .tin-chinh:hover, .tin-tuc .tin-phu:hover {
+            cursor: pointer;
+        }
+        .tin-tuc .tin-chinh:hover .tieu_de {
+            transform: none;
+        }
+        .tin-tuc .tieu_de_phu {
+            bottom: 0px;
+            transition: none;
+        }
+        .tin-tuc .tin-phu:hover .tieu_de_phu {
+            transform: none;
+        }
+        .tin-tuc .tin-chinh .overlay, .tin-tuc .tin-phu .overlay {
+            background: rgba(0,129,200,0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0px;
+            display: block;
+            transition: all 0.3s ease;
+            z-index: 3;
+        }
+        .tin-tuc .tin-chinh:hover .overlay, .tin-tuc .tin-phu:hover .overlay {
+            height: 100%;
+        }
+
+        .col1 {
+            float: left;
+            width: 26%;
+        }
+        .col1 p {
+            display: inline;
+        }
+        .col2 {
+            float: left;
+            width: 74%;
+            padding-left: 2px;
+        }
+        .ban-do {
+            display: block;
+            width: 100%;
+        }
+        .ban-do-mobile {
+            display: none;
+        }
+        .time_circles {
+            color: #fff;
+        }
+        .banner .dang-ky a {
+            color: #FD6504;
+        }
+        .banner .dang-ky a:hover 
+        {
+            color: #ffffff;
+        }
+        .dang-ky-desktop {
+            display: block;
+        }
+        .dang-ky-mobile {
+            display: none;
+        }
+        .lien-he {
+            margin: 5px auto;
+        }
+        .glyphicon {
+            position: static;
+        }
+        
+        .danh-sach-giao-vien-mobile .clip-svg2 {
+	        width: 0;
+	        height: 0;
+        }
+        .danh-sach-giao-vien-mobile .polygon-each2 {
+	        padding: 10px;
+	        text-align: center;
+        }
+        .danh-sach-giao-vien-mobile .polygon-each-img-wrap2 img {
+	        margin-bottom: 10px;
+        }
+        .danh-sach-giao-vien-mobile .polygon-clip-rhombus2 {
+	        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	        -webkit-clip-path: url("#polygon-clip-rhombus2");
+	        clip-path: url("#polygon-clip-rhombus2");
+        }
+        .danh-sach-giao-vien .clip-svg {
+	        width: 0;
+	        height: 0;
+        }
+
+        .danh-sach-giao-vien .polygon-each {
+	        padding: 10px;
+	        text-align: center;
+        }
+        .danh-sach-giao-vien .polygon-each-img-wrap img {
+	        margin-bottom: 10px;
+	        width:100%;
+        }
+        .danh-sach-giao-vien .polygon-clip-rhombus {
+	
+	        -webkit-clip-path: url("#polygon-clip-rhombus");
+	        clip-path: url("#polygon-clip-rhombus");
+	        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        @media only screen and (min-width: 992px) {
+            .dich-vu .canh-le {
+                max-height: 175px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                padding: 0 5px;
+            }
+        }
+        @media only screen and (min-width:800px) 
+            {
+                .tin-tuc .tin-phu img {
+					width:280px;
+					height: 210px;                           
+				}
+            }
+        @media only screen and (max-width: 768px) {
+            .tin-tuc .tin-chinh {
+                max-height: 100%;
+            }
+            .tin-tuc .tin-phu {
+                max-height: 100%;
+                width: 100%;
+            }
+            .col1 {
+                float: none;
+                width: 100%;
+            }
+            .col2 {
+                float: none;
+                width: 100%;
+                padding-left: 0;
+            }
+            .ban-do {
+                display: none;
+            }
+            .ban-do-mobile {
+                display: block;
+                width: 100%;
+            }
+            .dang-ky-desktop {
+                display: none;
+            }
+            .dang-ky-mobile {
+                display: block;
+            }
+        }
+</style>
+
+    <style type="text/css">
+        /*Định dạng lại cho font awesome*/
+        .wsmenu-list .megamenu li .fa {
+            font-size: 24pt;
+            padding-right: 34px;
+        }
+        .icon-khai-giang {
+            font-size: 24pt;
+        }
+        .co-so .noi-dung {
+            min-height: 100px;
+        }
+        .banner-chinh-nganh {
+            background-image: none;    
+        }
+        .danh-sach-hoc-vien .cam-nhan
+        {
+            text-align:justify;
+            max-width:700px;
+        }
+        .searchdestop {margin-top:34px; padding-right:10px}
+        .noi-dung-tim {float:left; margin-right:7px; width:180px; border-color:#0082c8;}
+        .nut-tim {font-size:20px; color:#0082c8; cursor: pointer;}
+         /*@media screen and (min-width:800px) {*/
+            a.flex {
+                display: flex !important;
+            }
+        /*}*/
+        @media screen and (min-width:800px) {
+            .fix-top {
+                position: fixed;
+                top: 0;
+                z-index: 9999;
+                width: 100%;
+            }
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 10px;
+            right: 5px;
+            z-index: 9999;
+            width: 32px;
+            padding:8px 0;
+            text-align: center;
+            line-height: 30px;
+            background: #0082C8;
+            color: #fff;font-weight:bold;
+            cursor: pointer;
+            border: 0;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: opacity 0.2s ease-out;
+            opacity: 0;
+        }
+        #back-to-top:hover {
+            background: #FD6504;
+        }
+        #back-to-top.show {
+            opacity: 1;
+        }
+    </style>
+	</head>
+	<body>
+		   <div class="wsmenucontainer clearfix">
+
+    <div class="wsmenucontent overlapblackbg menuclose"></div>
+    <div class="wsmenuexpandermain slideRight">
+    <a id="navToggle" class="animated-arrow slideLeft menuclose"><span></span></a>
+    <div class="search"><a href="http://www.t3h.vn/tim-kiem"><span class="glyphicon glyphicon-search" aria-hidden="true" style="font-size:20px; color:#ffffff"></span></a></div>
+    <a href="http://www.t3h.vn/" class="smallogo"><img src="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/logo_mobile.png" height="34px" alt=""></a>
+    
+    </div>
+ 
+    <div class="header">
+        <div class="wrapper clearfix">
+            <div class="container hidden-xs" style="position: relative;">
+                <div class="logo clearfix"><a href="http://www.t3h.vn/" title="Responsive Slide Menus"><img src="./Trung Tâm Tin Học ĐH Khoa Học Tự Nhiên_files/logo.png" alt=""></a></div>
+                <div class="searchdestop">
+                    <input type="text" placeholder="Tìm" class="noi-dung-tim">
+                    <span class="glyphicon glyphicon-search nut-tim" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+        <!--Menu chính-->
+        <div class="container-fluid fix-top" id="fix-menu" style="background-color:#0082c8;"> 
+            <div class="container">         
+                <nav class="wsmenu pm_buttoncolor blue-grdt slideLeft clearfix menuclose ">
+                    <ul class="mobile-sub wsmenu-list">
+                        <li><a href="http://www.t3h.vn/" class="active"><i class="fa fa-home"></i><span class="hometext"></span></a></li><li><a onclick="hidemenu()" class="scroll" href="http://www.t3h.vn/#gioi-thieu">Giới thiệu</a></li><li><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="http://www.t3h.vn/#">Lịch khai giảng</a><div class="megamenu clearfix halfmenu"><ul class="col-lg-6 col-md-6 col-xs-12 link-list"><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/tin-hoc-van-phong">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Tin học văn phòng</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/THVP-chuan-quoc-te-MOS">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Chứng chỉ quốc tế MOS</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/lap-trinh-va-csdl">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Lập trình &amp; CSDL</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/kiem-thu-phan-mem">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Kiểm thử phần mềm</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/internet-marketing">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Internet Marketing</div>
+                                                            </a>                            
+                                                        </li></ul>
+                                                <ul class="col-lg-6 col-md-6 col-xs-12 link-list"><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/do-hoa-da-truyen-thong">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Đồ hoạ đa truyền thông</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/thiet-ke-website">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Thiết kế website</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/lap-trinh-di-dong">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Lập trình di động</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/mang-may-tinh">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Mạng máy tính</div>
+                                                            </a>                            
+                                                        </li><li>
+                                                            <a href="http://www.t3h.vn/lich-khai-giang/sua-chua-tbdd">
+                                                                <span class="icon-khai-giang fa fa-calendar" aria-hidden="true"></span>
+                                                                <div class="tieu-de-ngay-khai-giang">Ngày 23-09-2016</div>          
+                                                                <div class="noi-dung-nganh-hoc">Sửa chữa TBDĐ</div>
+                                                            </a>                            
+                                                        </li> </ul></div></li><li><a onclick="hidemenu()" class="scroll" href="http://www.t3h.vn/#chuong-trinh-dao-tao">Chương trình đào tạo</a></li><li><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="http://www.t3h.vn/#">Dịch vụ</a><ul class="wsmenu-submenu"><li><a href="http://www.t3h.vn/tin-tuc/Dich-vu/Phat-trien-phan-mem-theo-yeu-cau-Co-quan-Doanh-nghiep-332"><i class="fa fa-desktop"></i>Phát triển phần mềm</a></li><li><a href="http://www.t3h.vn/tin-tuc/Dich-vu/Dao-tao-theo-yeu-cau-Co-quan-Doanh-nghiep-330"><i class="fa fa-institution"></i>Đào tạo theo yêu cầu</a></li><li><a href="http://www.t3h.vn/tin-tuc/Dich-vu/Tu-van-giam-sat---Tu-van-lap-du-an---Tu-van-quan-ly-du-an---Tu-van-giai-phap-CNTT-336"><i class="fa fa-edit"></i>Tư vấn quản lý dự án</a></li><li><a href="http://www.t3h.vn/tin-tuc/Dich-vu/Cung-cap-thiet-bi-phan-mem-thuong-mai-241"><i class="fa fa-database"></i>Cung cấp thiết bị - phần mềm</a></li><li><a href="http://www.t3h.vn/tin-tuc/Dich-vu/Quan-tri-he-thong-mang-tu-dong-NetMD-333"><i class="fa fa-globe"></i>Quản trị Hệ thống mạng tự động - NetMD</a></li><li><a href="http://www.t3h.vn/tin-tuc/Dich-vu/He-thong-Hoi-nghi-truyen-hinh-MobiMeeting-331"><i class="fa fa-group"></i>Hệ thống Hội nghị truyền hình MobiMeeting</a></li></ul>
+                                </li><li><a onclick="hidemenu()" class="scroll" href="http://www.t3h.vn/#tin-tuc">Tin tức</a></li><li><a href="http://www.t3h.vn/tin-tuc/Gioi-thieu-ve-Trung-tam-tin-hoc/Lien-he-342">Liên hệ</a></li>
+                    </ul>
+                    
+                </nav>               
+            </div>
+        </div>       
+    </div>
+	</body>
+</html>
