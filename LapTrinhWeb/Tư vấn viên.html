@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
+    	<link rel="stylesheet" type="text/css" href="Asset/Admin.css">
+    	<script type="text/javascript">
+        $(document).ready(function() {
+            $("#dskh").click(function(event) {
+              $(".danh-sach-khoa-hoc").toggle("slow");
+            });
+        });
+    		$(document).ready(function() {
+    			$("#dshv").click(function(event) {
+    				$(".danh-sach-hoc-vien-khoa-hoc").toggle("slow");
+    			});
+    		});
+    		$(document).ready(function() {
+    			$("#kh1").click(function(event) {
+    				$("#manhinhchinh1").toggle("slow");
+            $(".danh-sach-khoa-hoc").hide("slow");
+    			});
+    		});
+    		$(document).ready(function() {
+    			$("#ds1").click(function(event) {
+    				$("#manhinhchinh2").toggle("slow");
+            $(".danh-sach-hoc-vien-khoa-hoc").hide("slow");
+    			});
+    		});
+    		$(document).ready(function() {
+    			$("#email").click(function(event) {
+    				$("#manhinhchinh4").toggle("slow");
+    			});
+    		});
+    		$(document).ready(function() {
+			$("#icon-chat").click(function(event) {
+				$("#chat-box").toggle("slow");
+			});
+		});
+    		$(document).ready(function() {
+    			$("#slide-button").click(function(event) {
+    				if($("#slide-button").css('width')=='220px'){
+    					$("#slide-button").animate({width:'50px'}, 'slow');
+    					$("#div_slide").hide("slow");
+    				}
+    				else {
+    					$("#slide-button").animate({width:'220px'}, 'slow');
+    					$("#div_slide").show("slow");    					
+    				}
+    			});
+    		});
+             
+    	</script>
+    	<style type="text/css">
+      #wrapper {
+        margin-left:auto;
+        margin-right:auto;
+        width:800px;
+        }
+    		h6{
+    			color: white;
+    			text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    		}
+    	</style>
+    	
+	</head>
+	<body>
+    <img src="Asset/header ttth.jpg" style="width: 100%;height: 150px;">
+    
+		
+  <div class="list-cac-button" style="width: 300px;position: fixed;z-index: 1000;margin-top: 150px;">
+    <div style="float: left">
+          <button type="button" class="btn btn-primary" id="dskh" style="width: 315px">Danh sách khóa học</button><br>
+          <button type="button" class="btn btn-primary" id="dshv" style="width: 315px">Danh sách học viên</button><br>
+          <button type="button" class="btn btn-primary" id="email" style="width:315px">Email</button><br>
+          <button type="button" class="btn btn-primary" id="thong-tin-ca-nhan" style="width:315px">Thông tin cá nhân</button><br>
+          <button type="button" class="btn btn-primary" id="dang-xuat" style="width: 315px"><a href="/Bài%20tập/bootstrap/Login.html" style="color: white;">Đăng xuất</a></button>
+    </div>
+    <div style="position: absolute;display: inline-block;">
+        <div class="danh-sach-khoa-hoc" style="display: none;">         
+                <button type="button" class="btn btn-primary" id="kh1" style="width: 280px;">Khóa học 1</button><br>
+                <button type="button" class="btn btn-primary" style="width: 280px">Khóa học 2</button><br>
+                <button type="button" class="btn btn-primary" style="width: 280px">Khóa học 3</button><br>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2" style="width:280px"><span class="glyphicon glyphicon-search"></span>Tìm kiếm khóa học</button> 
+          </div>
+          <div class="danh-sach-hoc-vien-khoa-hoc" style="display: none">         
+              <button type="button" class="btn btn-primary" id="ds1" style="width: 280px">Danh sách học viên khóa học 1</button><br>
+              <button type="button" class="btn btn-primary" style="width: 280px" >Danh sách học viên khóa học 2</button><br>
+              <button type="button" class="btn btn-primary" style="width: 280px" >Danh sách học viên khóa học 3</button><br>    
+          </div>  
+        </div>
+      
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+		<div class="container-fluid">
+    <div>
+			<div class="row">
+				<div class="col-md-4">
+          
+        </div>
+				<div class="col-md-5" style="border-radius: 5px;" align="center" id="wrapper" >
+        <div  style="" class="jumbotron">
+					<div class="khoa-hoc-1" align="center" style="background-color: grey;height: 100%;display: none;" id="manhinhchinh1">
+						<div>
+							<h2>Giới Thiệu</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+							<p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
+							<h3>Học phí</h3>
+							<div style="border: solid 1px black;"><h3>100.000Đ/3 Tháng</h3></div>
+							<h3>Chế độ miễn giảm</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+							<h3>Ngày khai giảng</h3>
+							<span style="border: solid 1px black;margin-right: 5px">hh mm</span><span style="border: solid 1px black;margin-left: 5px">dd/mm/yyyy</span>
+							<div style="border: solid 1px black; height: 180px">
+								<h3>Lịch học</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+							</div>
+						</div>	
+            <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal1"></span>Thêm</button>
+              <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>Sửa</button>	
+					</div>
+          
+          <br>
+          <div style="background-color: orange;">
+              <div class="table-responsive" id="manhinhchinh2" style="display: none;">
+                  <table class="table table-hover">
+                    <thead>
+                    <tr>
+                    <th>Mã học viên</th>
+                    <th>Tên học viên</th>
+                    <th>Ngày sinh</th>
+                    <th>Số điện thoại</th>
+                    <th>E-mail</th>
+                    <th>Địa chỉ</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Học viên 1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>14/09/1995</td>
+                    <td>134324124</td>
+                    <td>nva@yahoo.com</td>
+                    <td>192 Hàm tử</td>
+                    <td><button type="button" class="btn btn-danger">Xem chi tiết</button></td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Học viên 2</td>
+                    <td>Nguyễn Văn B</td>
+                    <td>14/10/1995</td>
+                    <td>1134324124</td>
+                    <td>nvb@yahoo.com</td>
+                    <td>193 Hàm tử</td>
+                    <td><button type="button" class="btn btn-danger">Xem chi tiết</button></td>
+                  </tr>
+                  <tr>
+                    <td>Học viên 3</td>
+                    <td>Nguyễn Văn C</td>
+                    <td>15/10/1995</td>
+                    <td>0612414124</td>
+                    <td>nvb@yahoo.com</td>
+                    <td>194 Hàm tử</td>
+                    <td><button type="button" class="btn btn-danger">Xem chi tiết</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" class="btn btn-danger" ><span class="glyphicon glyphicon-plus"></span>Thêm học viên</button>
+              <button type="button" class="btn btn-danger" ><span class="glyphicon glyphicon-print"></span>Xuất danh sách</button>
+			     </div>
+      </div>
+      <br>
+      <div style="display: none;" id="manhinhchinh4" align="left">                         
+                <form style="text-align: left;" >
+                  Người nhận :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
+                  Chủ đề :<a data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-th-list"></span></a><input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                  Nội dung :
+                    <span class="glyphicon glyphicon-bold"></span><span class="glyphicon glyphicon-italic"></span><span class="glyphicon glyphicon-align-left"></span><span class="glyphicon glyphicon-align-center"></span><span class="glyphicon glyphicon-align-right"></span><span class="glyphicon glyphicon-list"></span><span class="glyphicon glyphicon-picture"></span><span class="glyphicon glyphicon-text-color"></span><span class="glyphicon glyphicon-superscript"></span><span class="glyphicon glyphicon-subscript"></span>
+                    <textarea name="" id="input" class="form-control" rows="12" required="required"></textarea>
+                    <button type="button" class="btn btn-sm btn-default" style="float:right;width: 100px;">Gửi</button>
+                </form>            
+            </div>    
+          
+             
+          </div> 
+          </div>        
+        </div>
+        <!--end row-->
+     
+        
+
+
+
+
+        <!--Modal1-->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog">
+    
+            <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tạo khóa học</h4>
+                </div>
+                <div class="modal-body">
+                    Khóa học ID :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                    Tên khóa học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                    Giới thiệu :<input type="text" name="" id="tuoi-quyen" class="form-control" value="" required="required" pattern="" title="">
+                    Chế độ miễn giảm :<select name="" id="tuoi-quyen" class="form-control">
+                      <option value="">-- Select One --</option>
+                      <option value="Tư vấn viên">Miễn giảm sinh viên trường</option>
+                      <option value="Người quản trị nội dung">Miễn giảm cho học viên đăng ký nhiều khóa học</option>
+                    </select>
+                    Ngày khai giảng :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
+                    Lịch học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                    <button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Thêm</button>
+                      
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+                
+            </div>
+      
+          </div>
+
+
+
+  			<div class="modal fade" id="myModal2" role="dialog">
+    			<div class="modal-dialog">
+    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					<h4 class="modal-title">Tìm kiếm khóa học</h4>
+        				</div>
+        				<div class="modal-body">
+          					Tên khóa học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					<button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Tìm</button>
+          						
+          				</div>
+          				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        				</div>
+        			</div>
+        				
+     		 		</div>
+      
+    			</div>
+  			</div>
+
+
+
+
+  			<div class="modal fade" id="myModal3" role="dialog">
+    			<div class="modal-dialog">
+    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					<h4 class="modal-title">Tìm kiếm khóa học</h4>
+        				</div>
+        				<div class="modal-body">
+          					Chọn khóa học :<select name="" id="input" class="form-control" required="required">
+          						<option value="">Khóa học 1</option>
+          						<option value="">Khóa học 2</option>
+          						<option value="">Khóa học 3</option>
+          						<option value="">Khóa học 4</option>
+          					</select>
+          					<button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">OK</button>
+          						
+          				</div>
+          				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        				</div>
+        			</div>
+        				
+     		 		</div>
+      
+    			</div>
+  			</div>
+
+
+
+
+  		
+
+
+
+
+  		<div class="container-fluid" id="" style="display: none;">
+			<div class="row">
+				<div class="col-md-4" >
+				</div>
+				<div class="col-md-1">
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					
+				</div>
+			</div>
+		</div>
+
+
+
+		<div style="right: 0px;bottom: 40px;position: fixed;" id="icon-chat">
+    		<img src="Asset/chat.png" height="100" width="100"/>
+    	</div>
+    	<div style="bottom: 0px;right:100px;position: fixed;display: none; width: 173px;height: 200px" id="chat-box">
+    		<div style="background-color: orange;border-radius:5px ;height: 20px;">Tư vấn</div>
+    		<div style="background-color: white;border-radius:5px ;height: 160px;border: solid 1px black">
+    			khách :*************
+    			<br>
+    			<br>
+    			<br>
+    			<br>
+    			<br>
+    			<br>
+    			<br>
+    			<span class="glyphicon glyphicon-align-left"></span><span class="glyphicon glyphicon-align-center"></span><span class="glyphicon glyphicon-align-right"></span><span class="glyphicon glyphicon-align-justify"></span><span class="glyphicon glyphicon-list"></span><span class="glyphicon glyphicon-picture"></span><span class="glyphicon glyphicon-paperclip"></span><span class=""></span><span class=""></span><span class=""></span>
+
+    		</div>
+    		<input type="text" name="chat" style="height: 20px"/>
+    	</div>
+
+    	<div style="right: 0px;bottom: 600px;position: fixed;height: 140px;">
+   			<div class="btn btn-primary" id="slide-button" style="float:right; width: 50px;height: 40px;overflow: hidden;border-bottom-left-radius: 180px;
+        border-top-left-radius: 180px;border-left-style: inherit;">
+   				Thông tin tài khoảng
+   				</div>
+   				<br>
+   				<br>
+   				<div id="div_slide" style="display: none;">
+   					<div class="btn-primary thong-tin" style="overflow: hidden;height: 100px;width: 220px;right: 0px;">
+              <img src="Asset/user_icon.png" style="float: left;width: 30%;height: 100%">
+   						<h6 style="padding-top: 10px;padding-right: 20px;float: right;">Quyền :Tư vấn viên</h6>
+   						<h6 style="padding-top: 5px;padding-left: 10px;float: right;">Tài khoảng :taikhoang2</h6>
+   					</div>
+   				</div>
+    		
+    	</div>
+    		
+		
+
+
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    	<script type="text/javascript" src="Source JavaScript/Myjs.js"></script>
+    	
+		
+	</body>
+</html>

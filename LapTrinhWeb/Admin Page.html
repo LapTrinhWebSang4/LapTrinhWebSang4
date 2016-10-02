@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Admin Page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
+    	<link rel="stylesheet" type="text/css" href="Asset/Admin.css">
+    		
+    	
+	</head>
+	<body>
+
+		<div class="container" id="div_header">
+		<div class="row">
+			<div class="col-md-3" style="height: 110px;">
+				<img src="element/Hcmute.svg.png" alt="spkt.png" ><br>
+			</div>
+			<div class="col-md-5">
+				<div style="padding-top: 15px">	
+					<h3 style="color: red;">TRƯỜNG ĐẠI HỌC</h3>
+					<h3 style="color: blue; font-size: 40px">SƯ PHẠM KỸ THUẬT</h3>
+					<h3 style="color: red">TRUNG TÂM TIN HỌC</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+		<button class="btn btn-primary" style="position: fixed;" id="button1">Quản lý tài khoản</button>
+		<button class="btn btn-primary" style="position: fixed;" id="button2">Gửi mail</button>
+		<button class="btn btn-primary" style="position: fixed;" id="button3"><a href="/Bài%20tập/bootstrap/Login.html" style="color: white;">Đăng xuất</a></button>
+		<div class="container-fluid" id="manhinhchinh1">
+			<!-- begin row-->
+			<div class="row1">
+				<div class="row">
+					<div class="col-md-4">	
+					</div>
+					<div class="col-md-4 btn-primary"  id="clickhere">
+						<div class="menu-item1" >
+							<h4 style="float:left">Tài khoản 1</h4>
+							<a style="float:right">
+								<span class="glyphicon glyphicon-circle-arrow-up"></span>
+							</a>
+							<a style="float:right" id="khoa1" data-toggle="modal" data-target="#myModal">
+								<span class="glyphicon glyphicon-lock"></span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">				
+					</div>
+					<div class="col-md-4" style="background-color: yellow" id="something1">
+						<div class="mycontent1">
+								<div style="float:left">
+									<h4>Email : ***********@******</h4>
+									<h4>Tài khoản : ************</h4>
+								</div>
+								<div style="float:right;">
+									<br>
+									<br>
+									<a href="#taikhoan1" data-toggle="modal" data-target="#myModal"><h6>Xem chi tiet</h6></a>
+								</div>
+							</div>						
+					</div>	
+				</div>
+				
+			</div>
+				<!-- end row-->
+			<!-- begin row-->
+			<div class="row2">
+				<div class="row">
+					<div class="col-md-4">				
+					</div>
+					<div class="col-md-4 btn-primary">
+						<div class="menu-item2" >
+							<h4 style="float:left">Tài khoản 2</h4>
+							<a style="float:right">
+								<span class="glyphicon glyphicon-circle-arrow-up"></span>
+							</a>
+							<a style="float:right" id="khoa2" data-toggle="modal" data-target="#myModal">
+								<span class="glyphicon glyphicon-lock"></span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">				
+					</div>
+					<div class="col-md-4" style="background-color: yellow" id="something2">
+						<div class="mycontent2" >
+							<div>
+									<div style="float:left">
+									<h4>Email : ***********@******</h4>
+									<h4>Tài khoản : ************</h4>
+								</div>
+								<div style="float:right;">
+									<br>
+									<br>
+									<a href="#taikhoan1" data-toggle="modal" data-target="#myModal"><h6>Xem chi tiet</h6></a>
+								</div>
+								</div>						
+							</div>						
+					</div>	
+				</div>	
+			</div>
+				<!-- end row-->
+			<!-- begin row-->
+			<div class="row3">
+				<div class="row">
+					<div class="col-md-4">	
+					</div>
+					<div class="col-md-4 btn-primary">
+						<div class="menu-item3" >
+							<h4 style="float:left">Tài khoản 3</h4>
+							<a style="float:right">
+								<span class="glyphicon glyphicon-circle-arrow-up"></span>
+							</a>
+							<a style="float:right" id="khoa3" data-toggle="modal" data-target="#myModal">
+								<span class="glyphicon glyphicon-lock"></span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">				
+					</div>
+					<div class="col-md-4" style="background-color: yellow" id="something3">
+						<div class="mycontent3" >
+							<div>
+									<div style="float:left">
+									<h4>Email : ***********@******</h4>
+									<h4>Tài khoản : ************</h4>
+								</div>
+								<div style="float:right;">
+									<br>
+									<br>
+									<a href="#taikhoan1" data-toggle="modal" data-target="#myModal"><h6>Xem chi tiet</h6></a>
+								</div>
+								</div>						
+							</div>						
+					</div>	
+				</div>	
+			</div>
+				<!-- end row-->
+			<!-- begin row-->
+			<div class="row4">
+				<div class="row">
+					<div class="col-md-4">	
+					</div>
+					<div class="col-md-4 btn-primary">
+						<div class="menu-item4" >
+							<h4 style="float:left">Tài khoản 4</h4>
+							<a style="float:right">
+								<span class="glyphicon glyphicon-circle-arrow-up"></span>
+							</a>
+							<a style="float:right" id="khoa4" data-toggle="modal" data-target="#myModal">
+								<span class="glyphicon glyphicon-lock"></span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">				
+					</div>
+					<div class="col-md-4" style="background-color: yellow" id="something4">
+						<div class="mycontent4">
+							<div>
+									<div style="float:left">
+									<h4>Email : ***********@******</h4>
+									<h4>Tài khoản : ************</h4>
+								</div>
+								<div style="float:right;">
+									<br>
+									<br>
+									<a href="#taikhoan1" data-toggle="modal" data-target="#myModal"><h6>Xem chi tiet</h6></a>
+								</div>
+								</div>						
+							</div>						
+					</div>	
+				</div>	
+				<div class="row">
+					<div class="col-md-4">
+						
+					</div>
+					<div class="col-md-4" align="right">
+						<ul class="pagination">
+  					<li><a href="#">1</a></li>
+  					<li><a href="#">2</a></li>
+  					<li><a href="#">3</a></li>
+  					<li><a href="#">4</a></li>
+  					<li><a href="#">5</a></li>
+				</ul>	
+					</div>
+				</div>
+			</div>
+
+			<!-- Nút thêm mới-->
+			<div class="row">
+				<div class="col-md-7">
+					
+				</div>
+				<div class="col-md-1">
+					<button class="btn btn-primary"><a data-toggle="modal" data-target="#myModal1" style="color: white">Thêm mới</a></button>
+				</div>	
+			</div>
+
+
+
+
+			<!--Modal-->
+			<div class="modal fade" id="myModal" role="dialog">
+    			<div class="modal-dialog">
+    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					<h4 class="modal-title">Tài khoản 1</h4>
+        				</div>
+        				<div class="modal-body">
+          					Họ tên :<input type="text" name="" id="input" class="form-control" value="****" required="required" pattern="" title="">
+          					Tuổi :<input type="text" name="" id="tuoi-quyen" class="form-control" value="" required="required" pattern="" title="">
+          					Quyền :<select name="" id="tuoi-quyen" class="form-control">
+          						<option value="">-- Select One --</option>
+          						<option value="Tư vấn viên">Tư vấn viên</option>
+          						<option value="Người quản trị nội dung">Người quản trị nội dung</option>
+          					</select>
+          					Email :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
+          					Số điện thoại :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					Số CMND :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					Tài khoảng :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					Mật khẩu :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					<div class="checkbox">
+          						<label>
+          							<input type="checkbox" value="">
+          							<span class="glyphicon glyphicon-lock" style="width:30px;height:30px; "></span>
+          							Khóa tài khoản
+          						</label>
+          					</div>
+          					<div align="center">
+          						<button type="button" class="btn btn-primary" style="text-align: center;width: 120px">Sửa</button>
+          						<button type="button" class="btn btn-primary" style="text-align: center;width: 120px">Lưu</button>
+          						<button type="button" class="btn btn-primary" style="text-align: center;width: 120px">Xóa</button>
+          						<button type="button" class="btn btn-primary" style="text-align: center;width: 120px">Hủy</button>
+          					</div>
+          					
+
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        				</div>
+     		 		</div>
+      
+    			</div>
+  			</div>
+
+
+  			<!--Modal1-->
+  			<div class="modal fade" id="myModal1" role="dialog">
+    			<div class="modal-dialog">
+    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					<h4 class="modal-title">Tạo tài khoản</h4>
+        				</div>
+        				<div class="modal-body">
+          					Họ tên :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					Tuổi :<input type="text" name="" id="tuoi-quyen" class="form-control" value="" required="required" pattern="" title="">
+          					Quyền :<select name="" id="tuoi-quyen" class="form-control">
+          						<option value="">-- Select One --</option>
+          						<option value="Tư vấn viên">Tư vấn viên</option>
+          						<option value="Người quản trị nội dung">Người quản trị nội dung</option>
+          					</select>
+          					Email :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
+          					Số điện thoại :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					Số CMND :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+          					<div align="center">
+          						<button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Thêm</button>
+          						
+          					</div>
+          					
+
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        				</div>
+     		 		</div>
+      
+    			</div>
+  			</div>
+
+			
+
+
+		</div>
+
+
+		<div class="container-fluid" id="manhinhchinh2">
+			<div class="row">
+				<div class="col-md-4" >
+				</div>
+				<div class="col-md-1">
+					<ul class="nav nav-pills nav-stacked">
+  						<li class="active"><a href="#">Gửi mail</a></li>  						
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<form class="form-mail" method="POST" action="" >
+  							Người nhận :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
+  							Chủ đề :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+  							Nội dung :
+  								<span class="glyphicon glyphicon-bold"></span><span class="glyphicon glyphicon-italic"></span><span class="glyphicon glyphicon-align-left"></span><span class="glyphicon glyphicon-align-center"></span><span class="glyphicon glyphicon-align-right"></span><span class="glyphicon glyphicon-list"></span><span class="glyphicon glyphicon-picture"></span><span class="glyphicon glyphicon-text-color"></span><span class="glyphicon glyphicon-superscript"></span><span class="glyphicon glyphicon-subscript"></span>
+  								<textarea name="" id="input" class="form-control" rows="12" required="required"></textarea>
+  								<button type="button" class="btn btn-sm btn-default" style="float:right;width: 100px;">Gửi</button>
+  						</form>
+
+				</div>
+			</div>
+		</div>
+		
+
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    	<script type="text/javascript" src="Source JavaScript/Myjs.js"></script>
+    	
+    	
+	</body>
+</html>
