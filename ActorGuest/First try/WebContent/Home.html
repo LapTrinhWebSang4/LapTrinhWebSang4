@@ -7,7 +7,22 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 <style type="text/css">
+.footer-nav
+{
+text-align: right;
+list-style: none;
+}
+.footer-nav li
+{
+display: inline;
+}
+.footer-nav li:before
+{
+contain: '|';
+padding: 0px 10px;
+}
 .dropdown-submenu {
 	position: relative;
 }
@@ -24,14 +39,15 @@
 </style>
 <style>
 body {
-	background-image: url("element/background.jpg");
+	background-color: #999966;
 }
 </style>
 <link rel="stylesheet" href="css/w3.css">
+
 </head>
 <body>
 	<div class="ad-flt-right"
-		style="position: fixed; right: 0; bottom: 40px;">
+		style="position: fixed; right: 0; bottom: 74px;">
 		<a id="dangky" href="/dang-ky"> <img class="dang-ky-desktop"
 			src="Hinh/dktt.gif" alt="" width="100px" height="100px">
 		</a>
@@ -42,7 +58,7 @@ body {
 		<nav class="navbar">
 			<img src="element/header ttth.jpg" style="width: 100%;">
 			<div class="containner">
-				<ul class="nav nav-justified w3-pale-blue">
+				<ul class="nav nav-justified" style="background-color: #4d004d; color: white;">
 					<li><a href="home.html">Trang chủ</a></li>
 					<li><a href="thongbao.html">Thông báo</a></li>
 					<li class="dropdown"><a class="dropdown-toggle"
@@ -115,9 +131,9 @@ body {
 		<table>
 			<thead>
 				<tr>
-					<td class="w3-pale-blue" align="center"><h4>Noi Bat</h4></td>
+					<td style="background-color: #4d004d; color: white;" align="center"><h4>Noi Bat</h4></td>
 					<td></td>
-					<td class="w3-pale-blue" align="center"><h4>Hot News</h4></td>
+					<td style="background-color: #4d004d; color: white;" align="center"><h4>Hot News</h4></td>
 				</tr>
 			</thead>
 			<tbody>
@@ -125,56 +141,56 @@ body {
 					<td style="background-color: white;"><div class="container"
 							style="width: 950px;">
 							<br>
-				  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-				    <!-- Indicators -->
-				    <ol class="carousel-indicators">
-				      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-				      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-				      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-				      <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
-				    </ol>
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#myCarousel" data-slide-to="0" class=""></li>
+									<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+									<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+									<li data-target="#myCarousel" data-slide-to="3" class="active"></li>
+								</ol>
 
-				    <!-- Wrapper for slides -->
-				    <div class="carousel-inner" role="listbox">
-				      <div class="item">
-				      <a href="thuchanh.html">
-				        <img src="Hinh/android.png" alt="Chania" width="1000" height="500">
-				        </a>
-				      </div>
-					
-				      <div class="item">
-				      <a href="#">
-				        <img src="Hinh/ios.jpg" alt="Chania" width="1000" height="500">
-				        </a>
-				      </div>
-				    
-				      <div class="item">
-				      <a href="#">
-				        <img src="Hinh/web.png" alt="Flower" width="1000" height="500">
-				         </a>
-				      </div>
-				     
-				      <div class="item active">
-				      <a href="#">
-				        <img src="Hinh/pts.jpg" alt="Flower" width="1000" height="500">
-				        </a>
-				      </div>
-				      
-				    </div>
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item">
+										<a href="thuchanh.html"> <img src="Hinh/android.png"
+											alt="Chania" width="1000" height="500">
+										</a>
+									</div>
 
-				    <!-- Left and right controls -->
-				    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				      <span class="sr-only">Previous</span>
-				    </a>
-				    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				      <span class="sr-only">Next</span>
-				    </a>
-				  </div>
+									<div class="item">
+										<a href="#"> <img src="Hinh/ios.jpg" alt="Chania"
+											width="1000" height="500">
+										</a>
+									</div>
 
-				</div>
-						</td>
+									<div class="item">
+										<a href="#"> <img src="Hinh/web.png" alt="Flower"
+											width="1000" height="500">
+										</a>
+									</div>
+
+									<div class="item active">
+										<a href="#"> <img src="Hinh/pts.jpg" alt="Flower"
+											width="1000" height="500">
+										</a>
+									</div>
+
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#myCarousel"
+									role="button" data-slide="prev"> <span
+									class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a> <a class="right carousel-control" href="#myCarousel"
+									role="button" data-slide="next"> <span
+									class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+
+						</div></td>
 					<td style="width: 2px"></td>
 					<td style="background-color: white;"><marquee scrolldelay="6"
 							scrollamount="2" id="banner" onmouseover="this.stop()"
@@ -185,70 +201,86 @@ body {
 
 								<li><a href="#"> <img src="Hinh/khaigiang.jpg"
 										width="55" height="55" align="left"> <strong>
-											Lịch Khai Giảng tháng 10</strong>
+											Lịch Khai Giảng tháng 11</strong>
 								</a></li>
-								
-								<li><a href="#">
-									
-										<img src="Hinh/giamgia.jpg" width="55" height="55">
-									
-									
-										
-											<strong> Ưu đãi giảm giá cho tân sinh viên 2016</strong>
-										
-								</a></li>
-								
 
-								<li><a href="#">
-									
-										<img src="Hinh/lichthi.jpg" width="55" height="55">
-									
-									
-										
-											<strong> Lich Thi Môn Lập Trình Android</strong>
-									
+								<li><a href="#"> <img src="Hinh/giamgia.jpg" width="55"
+										height="55"> <strong> Ưu đãi giảm giá cho tân
+											sinh viên 2016</strong>
+
 								</a></li>
-								
-								<li><a href="#">
-									
-										<img src="Hinh/tinhoc.png" width="55" height="55">
-									
-										
-											<strong> Học tin học cơ sở miễn phí</strong>
-									
+
+
+								<li><a href="#"> <img src="Hinh/lichthi.jpg" width="55"
+										height="55"> <strong> Lich Thi Môn Lập Trình
+											Android</strong>
+
 								</a></li>
-								
-								<li><a href="#">
-									
-										<img src="Hinh/thuthuat.jpg" width="55" height="55">
-									
-										
-											<strong> Các thủ thuật máy tính hay</strong>
-											
-									
+
+								<li><a href="#"> <img src="Hinh/tinhoc.png" width="55"
+										height="55"> <strong> Học tin học cơ sở miễn
+											phí</strong>
+
 								</a></li>
-								
+
+								<li><a href="#"> <img src="Hinh/thuthuat.jpg"
+										width="55" height="55"> <strong> Các thủ thuật
+											máy tính hay</strong>
+
+
+								</a></li>
+
 							</ul>
 						</marquee></td>
 				</tr>
-				
-				
+
+
 				<tr>
-				<td style="background-color: white;">
+					<td style="background-color: white;">
 				</tr>
 				<tr>
 					<td style="background-color: white;">
 						<div class="form-group" style="padding-top: 10px">
 							<div class="col-md-9">
 								<img src="Hinh/ttth.jpg" class="img-rounded" alt="Cinque Terre"
-									width="780" height="250">
+									width="100%">
 							</div>
-
 						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="background-color: white;">
+						<br>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+	
+	<footer
+		style="background-color: #4d004d; color: white; padding-top: 25px;">
+		<div class="container">
+			
+			<div class="bottom-footer" style="border-top: 1px solid #b2b2b2; margin-top: 10px; padding-top: 10px; corlor: red;">
+				<div class="col-md-5">
+				<p>developed by G6</p>
+				<img src="element/diachiicon.png" class="img-rounded" width="20px" height="20px" align="left">
+				Cơ sở chính: XX/XX, đường ss, Q.qq, TH. HCM
+				<br>
+				<img src="element/phoneicon.png" class="img-rounded" width="20px" height="20px" align="left">
+				Đt: xx50 43x 8xx
+				</div>
+				<div class="col-md-7">
+					<ul class="footer-nav">
+						<li><a href="Home.html">Home</a></li>
+						<li><a href="giangvien.html">Contract</a></li>
+						<li><a href="thungo.html">About us</a></li>
+					</ul>
+				</div>
+				
+			</div>
+						
+		</div>
+	</footer>
 </body>
 </html>
