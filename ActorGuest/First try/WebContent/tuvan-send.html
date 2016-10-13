@@ -49,6 +49,18 @@ body {
 	
 }
 </style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('validateCtrl', function($scope) {
+		$scope.user = 'John';
+		$scope.email = 'Example@gmail.com';
+		$scope.phone = '09';
+		$scope.lable = 'lable';
+		$scope.txtara = 'your question';
+	});
+</script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#btn-send").click(function(event) {
@@ -166,27 +178,59 @@ body {
 							sách câu hỏi</button></a></li>
 			</ul>
 		</nav>
-		<div class="jumbotron" id="send-q">
+		<div class="jumbotron" id="send-q" >
+					<form ng-app="myApp" ng-controller="validateCtrl"
+					name="myForm" novalidate>
 			<h3>Đặt câu hỏi</h3>
 			<label>Đối tượng</label><select class="form-control">
 				<option>Sinh viên</option>
 				<option>Giảng viên</option>
 				<option>Khác</option>
 			</select> <label for="name">Họ tên</label> <input type="text"
-				class="form-control" id="name" placeholder="Nhập họ tên"> <label
-				for="name">Email</label> <input type="text" class="form-control"
-				id="email" placeholder="Nhập email"> <label>Lĩnh vực</label><select
+				class="form-control input-lg" id="name" placeholder="Nhập họ tên" name="user"
+								ng-model="user" required><span
+								style="color: red"
+								ng-show="myForm.user.$dirty && myForm.user.$invalid"> <span
+									ng-show="myForm.user.$error.required">Name is
+										required.</span></span><br>
+				 <label
+				for="name">Email</label> <input
+								class="form-control" type="email" name="email" ng-model="email"
+								required> <span style="color: red"
+								ng-show="myForm.email.$dirty && myForm.email.$invalid"> <span
+									ng-show="myForm.email.$error.required">Email is
+										required.</span> <span ng-show="myForm.email.$error.email">Invalid
+										email address.</span>
+							</span>
+							<br>
+				 <label>Lĩnh vực</label><select
 				class="form-control">
 				<option>Chế độ Chính sách - Học bổng</option>
 				<option>Học phí và kỷ luật về HP</option>
 				<option>Chứng chỉ</option>
-			</select> <label for="name">Tiêu đề</label> <input type="text"
-				class="form-control" id="tieude" placeholder="Tiêu đề"> <label
+			</select> <br>
+			<label for="name">Tiêu đề</label> <input type="text"
+				class="form-control" id="tieude" placeholder="Tiêu đề" name="lable"
+								ng-model="lable" required> <span
+								style="color: red"
+								ng-show="myForm.lable.$dirty && myForm.lable.$invalid"> <span
+									ng-show="myForm.lable.$error.required">Lable is
+										required.</span></span>
+			<br>
+			<label
 				for="name">Nội dung</label>
-			<textarea class="form-control" rows="6"></textarea>
+			<textarea class="form-control" rows="6" name="txtara"
+								ng-model="txtara" required></textarea>
+								<span
+								style="color: red"
+								ng-show="myForm.txtara.$dirty && myForm.txtara.$invalid"> <span
+									ng-show="myForm.txtara.$error.required">Question is
+										required.</span></span>
+										<br>
 
 			<button class="btn btn-success" data-toggle="modal"
-				data-target="#myModal">Gửi câu hỏi</button>
+				data-target="#myModal" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+myForm.email.$dirty && myForm.email.$invalid || myForm.phone.$dirty && myForm.phone.$invalid || myForm.phone.$error.required || myForm.lable.$error.required || myForm.txtara.$error.required">Gửi câu hỏi</button>
 
 			<!-- Modal -->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -211,6 +255,7 @@ body {
 					<!-- /.modal-content -->
 				</div>
 			</div>
+			</form>
 		</div>
 
 		<div id="list-q" style="display: none;">
@@ -248,15 +293,16 @@ body {
 	<footer
 		style="background-color: #4d004d; color: white; padding-top: 25px;">
 		<div class="container">
-			
-			<div class="bottom-footer" style="border-top: 1px solid #b2b2b2; margin-top: 10px; padding-top: 10px; corlor: red;">
+
+			<div class="bottom-footer"
+				style="border-top: 1px solid #b2b2b2; margin-top: 10px; padding-top: 10px; corlor: red;">
 				<div class="col-md-5">
-				<p>developed by G6</p>
-				<img src="element/diachiicon.png" class="img-rounded" width="20px" height="20px" align="left">
-				Cơ sở chính: XX/XX, đường ss, Q.qq, TH. HCM
-				<br>
-				<img src="element/phoneicon.png" class="img-rounded" width="20px" height="20px" align="left">
-				Đt: xx50 43x 8xx
+					<p>developed by G6</p>
+					<img src="element/diachiicon.png" class="img-rounded" width="20px"
+						height="20px" align="left"> Cơ sở chính: XX/XX, đường ss,
+					Q.qq, TH. HCM <br> <img src="element/phoneicon.png"
+						class="img-rounded" width="20px" height="20px" align="left">
+					Đt: xx50 43x 8xx
 				</div>
 				<div class="col-md-7">
 					<ul class="footer-nav">
@@ -265,9 +311,9 @@ body {
 						<li><a href="thungo.html">About us</a></li>
 					</ul>
 				</div>
-				
+
 			</div>
-						
+
 		</div>
 	</footer>
 </body>

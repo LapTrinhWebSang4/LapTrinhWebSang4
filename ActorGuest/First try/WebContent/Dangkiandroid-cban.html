@@ -10,6 +10,16 @@
 <link rel="stylesheet" href="css/w3.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('validateCtrl', function($scope) {
+		$scope.user = 'John';
+		$scope.email = 'Example@gmail.com';
+		$scope.phone = '09';
+	});
+</script>
 <style>
 body {
 	background-color: #999966;
@@ -109,17 +119,18 @@ body {
 				</div>
 			</nav>
 			<div class="jumbotron">
-				<form role="form">
+				<form role="form" ng-app="myApp" ng-controller="validateCtrl"
+					name="myForm" novalidate>
 					<div class="form-group">
 						<ul>
-							<li style="width: 50%;"><label>Môn học</label><select class="form-control"
+							<li><label>Môn học</label><select class="form-control"
 								id="cbx-mon"
 								onchange="location = this.options[this.selectedIndex].value;">
 									<option value="#">Lập trình android cơ bản</option>
 									<option value="Dangkiandroid-ncao.html">Lập trình
 										android nâng cao</option>
 							</select></li>
-							<li style="width: 50%;" id="cbx-cb"><label>Lớp học</label><select
+							<li id="cbx-cb"><label>Lớp học</label><select
 								class="form-control">
 									<option>Thu 3-5 (18h30-20h30) KG: 1 thang 10</option>
 									<option>Thu 2-4 (18h30-20h30) KG: 1 thang 10</option>
@@ -129,55 +140,77 @@ body {
 					<div class="form-group">
 						<ul>
 							<li><label for="name">Họ tên</label><input type="text"
-								class="form-control input-lg" id="name"
-								placeholder="Nhập họ tên"> <span class="help-block">Nhập
-									đầy đủ họ tên bạn</span></li>
+								class="form-control input-lg" type="text" name="user"
+								ng-model="user" required placeholder="Nhập họ tên"> <span
+								class="help-block">Nhập đầy đủ họ tên bạn</span> <span
+								style="color: red"
+								ng-show="myForm.user.$dirty && myForm.user.$invalid"> <span
+									ng-show="myForm.user.$error.required">Username is
+										required.</span>
+							</span></li>
 
-							<li><label for="email">Email</label> <input type="text"
-								class="form-control" id="email" placeholder="nhập email cua bạn"></li>
+							<li><label for="email">Email</label> <input
+								class="form-control" type="email" name="email" ng-model="email"
+								required> <span style="color: red"
+								ng-show="myForm.email.$dirty && myForm.email.$invalid"> <span
+									ng-show="myForm.email.$error.required">Email is
+										required.</span> <span ng-show="myForm.email.$error.email">Invalid
+										email address.</span>
+							</span></li>
 						</ul>
 						<ul>
 							<li><label for="sdt">Số điện thoại</label>
-							<div class="Col-sm-2">
-									<input type="text" class="form-control" id="sdt"
-										placeholder="Nhập số điện thoại">
+								<div class="Col-sm-2">
+									<input type="tel" class="form-control" id="sdt"
+										placeholder="Nhập số điện thoại" name="phone"
+								ng-model="phone" required> <span
+										style="color: red"
+										ng-show="myForm.phone.$dirty && myForm.phone.$invalid"> <span
+										ng-show="myForm.phone.$error.required">phone number is
+											required.</span>
 								</div></li>
 							<li><label> <input type="checkbox">Đang là
 									sinh viên
 							</label></li>
 							<li><label for="name">Thông tin khác</label> <textarea
 									class="form-control" rows="3" cols="12"></textarea></li>
-							<li><div style="float: right;"><button style="width: 50px; height: 30px; background-color: grey; color: white;">Link</button></div>
+							<li><div style="float: right;">
+									<button
+										style="width: 50px; height: 30px; background-color: grey; color: white;">Link</button>
+								</div>
 						</ul>
 
 					</div>
-				</form>
-				<button class="btn btn-success btn-block" data-toggle="modal"
-					data-target="#myModal">Xác nhận đăng kí</button>
+					<button class="btn btn-success btn-block" data-toggle="modal"
+						data-target="#myModal"
+						ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+myForm.email.$dirty && myForm.email.$invalid || myForm.phone.$dirty && myForm.phone.$invalid || myForm.phone.$error.required">Xác
+						nhận đăng kí</button>
 
-				<!-- Modal -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-					aria-labelledby="" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-hidden="true">&times;</button>
-								<h2 class="modal-title" id="myModalLabel" align="center">Xác
-									nhận</h2>
-							</div>
-							<div class="modal-body">Bạn có muốn đăng kí</div>
-							<div class="modal-footer">
-								<a href="home.html"><button type="button"
-										class="btn btn-block btn-primary">Xác nhận</button></a>
-								<button type="button" class="btn btn-block btn-default"
-									data-dismiss="modal">Hủy</button>
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+						aria-labelledby="" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">&times;</button>
+									<h2 class="modal-title" id="myModalLabel" align="center">Xác
+										nhận</h2>
+								</div>
+								<div class="modal-body">Bạn có muốn đăng kí</div>
+								<div class="modal-footer">
+									<a href="home.html"><button type="button"
+											class="btn btn-block btn-primary">Xác nhận</button></a>
+									<button type="button" class="btn btn-block btn-default"
+										data-dismiss="modal">Hủy</button>
 
+								</div>
 							</div>
+							<!-- /.modal-content -->
 						</div>
-						<!-- /.modal-content -->
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
