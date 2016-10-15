@@ -35,6 +35,8 @@
     	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
     	<link rel="stylesheet" type="text/css" href="Asset/headercss.css">
 
+
+
 		
 	</head>
 	<body class="no-skin">
@@ -75,39 +77,11 @@
 					try{ace.settings.loadState('sidebar')}catch(e){}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-					</div>
-
-					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-						<span class="btn btn-success"></span>
-
-						<span class="btn btn-info"></span>
-
-						<span class="btn btn-warning"></span>
-
-						<span class="btn btn-danger"></span>
-					</div>
-				</div><!-- /.sidebar-shortcuts -->
+				
 
 				<ul class="nav nav-list">
 					<li class="">
-						<a href="index.html">
+						<a href="Dashboard.html">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
 						</a>
@@ -138,7 +112,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="typography.html">
+								<a href="chi tiet khoa hoc.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 1
 								</a>
@@ -214,7 +188,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="tables.html">
+								<a href="Danh sach hoc vien.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Danh học viên khóa 1
 								</a>
@@ -231,7 +205,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Danh học viên khóa 3
 								</a>
@@ -250,7 +224,7 @@
 					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a href="Gui mail.html">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text"> Gửi mail </span>
 
@@ -259,7 +233,7 @@
 					</li>
 
 					<li class="">
-						<a href="widgets.html">
+						<a href="thong tin ca nhan.html">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text"> Thông tin cá nhân </span>
 						</a>
@@ -267,22 +241,7 @@
 						<b class="arrow"></b>
 					</li>
 
-					<li class="">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
-							<span class="menu-text">
-								Lịch
-
-								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-					<li class="">
+					<li class="active">
 						<a href="">
 							<i class="menu-icon fa fa-envelope"></i>
 							<span class="menu-text"> Tin nhắn </span>
@@ -290,6 +249,7 @@
 
 						<b class="arrow"></b>
 					</li>
+					
 					<li class="">
 						<a href="">
 							<i class="menu-icon fa fa-sign-out"></i>
@@ -308,11 +268,44 @@
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 				</div>
 			</div>
-
-			<div class="main-content" >
-				<div style="padding-left: 20px;padding-right: 20px;">
+			<div class="main-content">
+				<div class="main-content-inner">
 					<div class="row">
-							<div class="col-xs-12">
+					<div class="container-fluid">
+						<ul class="nav nav-justified w3-pale-blue">
+							<li><a href="home.html">Trang chủ</a></li>
+							<li><a href="thongbao.html">Thông báo</a></li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Giới thiệu<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="thungo.html">Thư ngỏ</a></li>
+										<li><a href="giangvien.html">Đội ngủ giản viên</a></li>
+										<li><a href="nhiemvu.html">Chức năng nhiệm vụ</a></li>
+									</ul></li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Lịch khai giảng<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="Dangkiwindows-win.html">Windows 1 tháng 10</a></li>
+										<li><a href="Dangkiandroid-cban.html">Android 1 tháng 10</a></li>
+									</ul>
+								</li>
+								
+								<li><a href="tuvan-send.html">Tư vấn-hỏi đáp</a></li>
+								<li><a href="#">Đăng xuất</a></li>
+							</ul>						
+						</div>				
+					</div>
+
+					<div class="page-content">
+					
+
+						<div class="page-header">
+							<h1>
+								Send Email
+							</h1>
+						</div><!-- /.page-header -->
+
+			
+						<div class="row">
+							<div class="col-xs-12"">
 								<!-- PAGE CONTENT BEGINS -->
 								<div class="row">
 									<div class="col-xs-12">
@@ -332,46 +325,7 @@
 													</a>
 												</li>
 
-												<li class="dropdown">
-													<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
-														<i class="pink ace-icon fa fa-tags bigger-130"></i>
-
-														<span class="bigger-110">
-															Tags
-															<i class="ace-icon fa fa-caret-down"></i>
-														</span>
-													</a>
-
-													<ul class="dropdown-menu dropdown-light-blue dropdown-125">
-														<li>
-															<a data-toggle="tab" href="#tag-1">
-																<span class="mail-tag badge badge-pink"></span>
-																<span class="pink">Tag#1</span>
-															</a>
-														</li>
-
-														<li>
-															<a data-toggle="tab" href="#tag-family">
-																<span class="mail-tag badge badge-success"></span>
-																<span class="green">Family</span>
-															</a>
-														</li>
-
-														<li>
-															<a data-toggle="tab" href="#tag-friends">
-																<span class="mail-tag badge badge-info"></span>
-																<span class="blue">Friends</span>
-															</a>
-														</li>
-
-														<li>
-															<a data-toggle="tab" href="#tag-work">
-																<span class="mail-tag badge badge-grey"></span>
-																<span class="grey">Work</span>
-															</a>
-														</li>
-													</ul>
-												</li><!-- /.dropdown -->
+												
 											</ul>
 
 											<div class="tab-content no-border no-padding">
@@ -986,34 +940,35 @@
 														</div>
 													</div>
 												</div><!--End inbox-->
-												<div id="texting" class="tab-pane">
-													<div class="message-container" >
-														<form class="form-horizontal" role="form">
+												<div id="texting" class="tab-pane" >
+													<div class=" message-container" >
+														<div class="widget-box" >
+															<form class="form-horizontal" role="form" style="width: 100%">
 															<div style="padding-top: 20px;">
-																<div class="form-group" style="width: 90%;">
-																	<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Tiêu đề </label>
+																<div class="form-group" style="width: 100%;">
+																	<label class="col-sm-2 control-label" for="form-field-1"> Tiêu đề </label>
 
 																	<div class="col-sm-9" >
 																		<input type="text" id="form-field-1-1" placeholder="Title" class="form-control">
 																	</div>
 
 																</div>
-																<div class="form-group" style="width: 90%">
-																		<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Người nhận </label>
+																<div class="form-group" style="width: 100%">
+																		<label class="col-sm-2 control-label" for="form-field-1-1">Người nhận </label>
 
 																		<div class="col-sm-9" >
-																			<input type="text" id="form-field-1-1" placeholder="From" class="form-control">
+																			<input type="text" id="form-field-1-1" placeholder="To" class="form-control">
 																		</div>
 																	</div>
-																<div class="form-group"  style="width: 90%">
-																		<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Nội dung </label>
+																<div class="form-group"  style="width: 100%">
+																		<label class="col-sm-2 control-label " for="form-field-1-1">Nội dung </label>
 
 																		<div class="col-sm-9">
 																			<textarea name="" id="input" class="form-control" rows="7" required="required"></textarea>
 																		</div>
 																	</div>
-																	<div class="form-group"  style="width: 90%">
-																		<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"></label>
+																	<div class="form-group"  style="width: 100%">
+																		<label class="col-sm-2 control-label " for="form-field-1-1"></label>
 
 																		<div class="col-sm-9">
 																			<div>
@@ -1025,6 +980,7 @@
 																	
 															</div>
 																</form>
+														</div>
 
 														</div>
 													</div><!--End texting-->
@@ -1033,79 +989,26 @@
 									</div><!-- /.col -->
 								</div><!-- /.row -->
 
-								<form id="id-message-form" class="hide form-horizontal message-form col-xs-12">
-									<div>
-										<div class="form-group">
-											<label class="col-sm-3 control-label no-padding-right" for="form-field-recipient">Recipient:</label>
 
-											<div class="col-sm-9">
-												<span class="input-icon">
-													<input type="email" name="recipient" id="form-field-recipient" data-value="alex@doe.com" value="alex@doe.com" placeholder="Recipient(s)">
-													<i class="ace-icon fa fa-user"></i>
-												</span>
-											</div>
-										</div>
 
-										<div class="hr hr-18 dotted"></div>
 
-										<div class="form-group">
-											<label class="col-sm-3 control-label no-padding-right" for="form-field-subject">Subject:</label>
 
-											<div class="col-sm-6 col-xs-12">
-												<div class="input-icon block col-xs-12 no-padding">
-													<input maxlength="100" type="text" class="col-xs-12" name="subject" id="form-field-subject" placeholder="Subject">
-													<i class="ace-icon fa fa-comment-o"></i>
-												</div>
-											</div>
-										</div>
 
-										<div class="hr hr-18 dotted"></div>
 
-										<div class="form-group">
-											<label class="col-sm-3 control-label no-padding-right">
-												<span class="inline space-24 hidden-480"></span>
-												Message:
-											</label>
 
-											<div class="col-sm-9">
-												<div class="wysiwyg-editor"></div>
-											</div>
-										</div>
 
-										<div class="hr hr-18 dotted"></div>
 
-										<div class="form-group no-margin-bottom">
-											<label class="col-sm-3 control-label no-padding-right">Attachments:</label>
-
-											<div class="col-sm-9">
-												<div id="form-attachments">
-													<input type="file" name="attachment[]">
-												</div>
-											</div>
-										</div>
-
-										<div class="align-right">
-											<button id="id-add-attachment" type="button" class="btn btn-sm btn-danger">
-												<i class="ace-icon fa fa-paperclip bigger-140"></i>
-												Add Attachment
-											</button>
-										</div>
-
-										<div class="space"></div>
-									</div>
-								</form>
 
 								<div class="hide message-content" id="id-message-content">
 									<div class="message-header clearfix">
 										<div class="pull-left">
-											<span class="blue bigger-125"> Clik to open this message </span>
 
 											<div class="space-4"></div>
 
 											<i class="ace-icon fa fa-star orange2"></i>
 
 											&nbsp;
-											<img class="middle" alt="John's Avatar" src="assets/images/avatars/avatar.png" width="32">
+											<img class="middle" alt="John's Avatar" src="" width="32">
 											&nbsp;
 											<a href="#" class="sender">John Doe</a>
 
@@ -1159,87 +1062,18 @@
 
 									<div class="hr hr-double"></div>
 
-									<div class="message-attachment clearfix">
-										<div class="attachment-title">
-											<span class="blue bolder bigger-110">Attachments</span>
-											&nbsp;
-											<span class="grey">(2 files, 4.5 MB)</span>
-
-											<div class="inline position-relative">
-												<a href="#" data-toggle="dropdown" class="dropdown-toggle">
-													&nbsp;
-													<i class="ace-icon fa fa-caret-down bigger-125 middle"></i>
-												</a>
-
-												<ul class="dropdown-menu dropdown-lighter">
-													<li>
-														<a href="#">Download all as zip</a>
-													</li>
-
-													<li>
-														<a href="#">Display in slideshow</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-
-										&nbsp;
-										<ul class="attachment-list pull-left list-unstyled">
-											<li>
-												<a href="#" class="attached-file">
-													<i class="ace-icon fa fa-file-o bigger-110"></i>
-													<span class="attached-name">Document1.pdf</span>
-												</a>
-
-												<span class="action-buttons">
-													<a href="#">
-														<i class="ace-icon fa fa-download bigger-125 blue"></i>
-													</a>
-
-													<a href="#">
-														<i class="ace-icon fa fa-trash-o bigger-125 red"></i>
-													</a>
-												</span>
-											</li>
-
-											<li>
-												<a href="#" class="attached-file">
-													<i class="ace-icon fa fa-film bigger-110"></i>
-													<span class="attached-name">Sample.mp4</span>
-												</a>
-
-												<span class="action-buttons">
-													<a href="#">
-														<i class="ace-icon fa fa-download bigger-125 blue"></i>
-													</a>
-
-													<a href="#">
-														<i class="ace-icon fa fa-trash-o bigger-125 red"></i>
-													</a>
-												</span>
-											</li>
-										</ul>
-
-										<div class="attachment-images pull-right">
-											<div class="vspace-4-sm"></div>
-
-											<div>
-												<img width="36" alt="image 4" src="assets/images/gallery/thumb-4.jpg">
-												<img width="36" alt="image 3" src="assets/images/gallery/thumb-3.jpg">
-												<img width="36" alt="image 2" src="assets/images/gallery/thumb-2.jpg">
-												<img width="36" alt="image 1" src="assets/images/gallery/thumb-1.jpg">
-											</div>
-										</div>
-									</div>
+								
 								</div><!-- /.message-content -->
 
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
-						</div>
-					</div>
-				
-
-				</div><!--End content-->
+						</div><!-- /.row -->
+					
+		
+					</div><!-- /.page-content -->
+				</div>
+			</div>
+			
 				
 		</div><!-- /.main-container -->
 
@@ -1263,8 +1097,20 @@
 			    for (i = 0; i < x.length; i++) {
 			        x[i].style.display = "none"; 
 			    }
-			    document.getElementById(id).style.display = "block"; 
+			    document.getElementById(id).style.display = "block";
+			    if(id=="texting"){
+			    	$(".message-content").addClass('hide');
+			    }
+
+			    
 			}
+			$(".text").click(function(event) {				
+			    	
+			    	
+			    		$(".message-content").removeClass('hide');	
+			    			   				
+			});
+
 		</script>
 
 		<!--End Script-->

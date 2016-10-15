@@ -1,8 +1,8 @@
 .whole-form{
-	width: 400px;
-	height: 250px;
-	border:solid 2px #3333ff;
-	border-radius: 10px;
+	
+	border-left:solid 3px #3333ff;
+	border-bottom:solid 2px #3333ff;
+	padding-left: 6px; 
 	margin:auto;
 	margin-top:200px;
 }

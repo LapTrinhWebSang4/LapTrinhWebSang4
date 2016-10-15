@@ -35,6 +35,32 @@
     	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
     	<link rel="stylesheet" type="text/css" href="Asset/headercss.css">
 
+    	<style type="text/css">
+			.container-fluid .dropdown-submenu {
+				position: relative;
+			}
+
+			.container-fluid .dropdown-submenu>.dropdown-menu {
+				top: 0;
+				left: 100%;
+				margin-top: -1px;
+			}
+
+			.container-fluid .dropdown-submenu:hover>.dropdown-menu {
+				display: block;
+				position: absolute;
+
+
+			}
+			.row{
+				padding-top: 5px;
+			}
+			
+		
+
+		</style>
+
+
 		
 	</head>
 	<body class="no-skin">
@@ -75,39 +101,9 @@
 					try{ace.settings.loadState('sidebar')}catch(e){}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-					</div>
-
-					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-						<span class="btn btn-success"></span>
-
-						<span class="btn btn-info"></span>
-
-						<span class="btn btn-warning"></span>
-
-						<span class="btn btn-danger"></span>
-					</div>
-				</div><!-- /.sidebar-shortcuts -->
-
 				<ul class="nav nav-list">
 					<li class="">
-						<a href="index.html">
+						<a href="Dashboard.html">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
 						</a>
@@ -138,7 +134,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="typography.html">
+								<a href="chi tiet khoa hoc.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 1
 								</a>
@@ -147,7 +143,7 @@
 							</li>
 
 							<li class="">
-								<a href="typography.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 2
 								</a>
@@ -156,7 +152,7 @@
 							</li>
 
 							<li class="">
-								<a href="elements.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 3
 								</a>
@@ -165,7 +161,7 @@
 							</li>
 
 							<li class="">
-								<a href="buttons.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 4
 								</a>
@@ -174,7 +170,7 @@
 							</li>
 
 							<li class="">
-								<a href="content-slider.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 5
 								</a>
@@ -183,7 +179,7 @@
 							</li>
 
 							<li class="">
-								<a href="treeview.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 6
 								</a>
@@ -192,7 +188,7 @@
 							</li>
 
 							<li class="">
-								<a href="jquery-ui.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 7
 								</a>
@@ -202,7 +198,7 @@
 						</ul>
 					</li>
 
-					<li class="">
+					<li class="open">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-list"></i>
 							<span class="menu-text"> Danh sách học viên </span>
@@ -213,7 +209,7 @@
 						<b class="arrow"></b>
 
 						<ul class="submenu">
-							<li class="">
+							<li class="active">
 								<a href="tables.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Danh học viên khóa 1
@@ -223,7 +219,7 @@
 							</li>
 
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Danh học viên khóa 2
 								</a>
@@ -231,7 +227,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Danh học viên khóa 3
 								</a>
@@ -239,7 +235,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Danh học viên khóa 4
 								</a>
@@ -250,7 +246,7 @@
 					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a href="Gui mail.html" >
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text"> Gửi mail </span>
 
@@ -259,7 +255,7 @@
 					</li>
 
 					<li class="">
-						<a href="widgets.html">
+						<a href="Thong tin ca nhan.html">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text"> Thông tin cá nhân </span>
 						</a>
@@ -268,28 +264,14 @@
 					</li>
 
 					<li class="">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
-							<span class="menu-text">
-								Lịch
-
-								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-					<li class="">
-						<a href="">
+						<a href="Nhan tin.html">
 							<i class="menu-icon fa fa-envelope"></i>
 							<span class="menu-text"> Tin nhắn </span>
 						</a>
 
 						<b class="arrow"></b>
 					</li>
+	
 					<li class="">
 						<a href="">
 							<i class="menu-icon fa fa-sign-out"></i>
@@ -311,13 +293,78 @@
 
 			<div class="main-content" >
 				<div style="padding-left: 20px;padding-right: 20px;">
+					<div class="main-content-inner">
 					<div class="row">
+						
+					<div class="container-fluid">
+						<ul class="nav nav-justified w3-pale-blue">
+					<li><a href="home.html">Trang chủ</a></li>
+					<li><a href="thongbao.html">Thông báo</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Giới thiệu<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="thungo.html">Thư ngỏ</a></li>
+							<li><a href="giangvien.html">Đội ngủ giản viên</a></li>
+							<li><a href="nhiemvu.html">Chức năng nhiệm vụ</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Lịch khai giảng<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="Dangkiwindows-win.html">Windows 1 tháng 10</a></li>
+							<li><a href="Dangkiandroid-cban.html">Android 1 tháng 10</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="tuvan-send.html">Tư vấn-hỏi đáp</a></li>
+					<li><a href="#">Đăng xuất</a></li>
+				</ul>						
+				</div>				
+					</div>
+						<div class="row">
 									<div class="col-xs-12">
 										<div class="clearfix">
-											<div class="pull-right tableTools-container"><div class="dt-buttons btn-overlap btn-group"><a class="dt-button buttons-collection buttons-colvis btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-search bigger-110 blue"></i> <span class="hidden">Show/hide columns</span></span></a><a class="dt-button buttons-copy buttons-html5 btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-copy bigger-110 pink"></i> <span class="hidden">Copy to clipboard</span></span></a><a class="dt-button buttons-csv buttons-html5 btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-database bigger-110 orange"></i> <span class="hidden">Export to CSV</span></span></a><a class="dt-button buttons-excel buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-file-excel-o bigger-110 green"></i> <span class="hidden">Export to Excel</span></span><div style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;" data-original-title="" title=""><embed id="ZeroClipboard_TableToolsMovie_1" src="assets/swf/flashExport.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="39" height="35" name="ZeroClipboard_TableToolsMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=39&amp;height=35" wmode="transparent"></div></a><a class="dt-button buttons-pdf buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-file-pdf-o bigger-110 red"></i> <span class="hidden">Export to PDF</span></span><div style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;" data-original-title="" title=""><embed id="ZeroClipboard_TableToolsMovie_2" src="assets/swf/flashExport.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="39" height="35" name="ZeroClipboard_TableToolsMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=39&amp;height=35" wmode="transparent"></div></a><a class="dt-button buttons-print btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-print bigger-110 grey"></i> <span class="hidden">Print</span></span></a></div></div>
+												<div class="pull-right tableTools-container">
+												<div class="dt-buttons btn-overlap btn-group">
+													<a
+														class="dt-button buttons-copy buttons-html5 btn btn-white btn-primary btn-bold"
+														tabindex="0" aria-controls="dynamic-table" data-original-title=""
+														title=""><span><i class="fa fa-copy bigger-110 pink"></i>
+															<span class="hidden">Copy to clipboard</span></span></a><a
+														class="dt-button buttons-excel buttons-flash btn btn-white btn-primary btn-bold"
+														tabindex="0" aria-controls="dynamic-table"><span><i
+															class="fa fa-file-excel-o bigger-110 green"></i> <span
+															class="hidden">Export to Excel</span></span>
+													<div
+															style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;"
+															data-original-title="" title="">
+															<embed id="ZeroClipboard_TableToolsMovie_1"
+																src="assets/swf/flashExport.swf" loop="false" menu="false"
+																quality="best" bgcolor="#ffffff" width="39" height="35"
+																name="ZeroClipboard_TableToolsMovie_1" align="middle"
+																allowscriptaccess="always" allowfullscreen="false"
+																type="application/x-shockwave-flash"
+																pluginspage="http://www.macromedia.com/go/getflashplayer"
+																flashvars="id=1&amp;width=39&amp;height=35" wmode="transparent">
+														</div></a><a
+														class="dt-button buttons-pdf buttons-flash btn btn-white btn-primary btn-bold"
+														tabindex="0" aria-controls="dynamic-table"><span><i
+															class="fa fa-file-pdf-o bigger-110 red"></i> <span class="hidden">Export
+																to PDF</span></span>
+													<div
+															style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;"
+															data-original-title="" title="">
+															<embed id="ZeroClipboard_TableToolsMovie_2"
+																src="assets/swf/flashExport.swf" loop="false" menu="false"
+																quality="best" bgcolor="#ffffff" width="39" height="35"
+																name="ZeroClipboard_TableToolsMovie_2" align="middle"
+																allowscriptaccess="always" allowfullscreen="false"
+																type="application/x-shockwave-flash"
+																pluginspage="http://www.macromedia.com/go/getflashplayer"
+																flashvars="id=2&amp;width=39&amp;height=35" wmode="transparent">
+														</div></a>
+												</div>
+											</div>
 										</div>
 										<div class="table-header">
-											Khóa học 1
+											Lớp học 1
 										</div>
 
 										<!-- div.table-responsive -->
@@ -340,49 +387,6 @@
 												<tbody>
 													
 
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
-
-													
 												<tr role="row" class="odd">
 														<td class="center">
 															<label class="pos-rel">
@@ -405,7 +409,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -473,7 +477,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -541,7 +545,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -609,7 +613,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -677,7 +681,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -745,7 +749,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -813,7 +817,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -881,7 +885,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -949,7 +953,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -1017,7 +1021,7 @@
 														<td>
 															<div class="hidden-sm hidden-xs action-buttons">
 																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
+																	<i class=""></i>
 																</a>
 
 																<a class="green" href="#">
@@ -1064,13 +1068,824 @@
 															</div>
 														</td>
 													</tr></tbody>
-											</table><div class="row"><div class="col-xs-6"><div class="dataTables_info" id="dynamic-table_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div></div><div class="col-xs-6"><div class="dataTables_paginate paging_simple_numbers" id="dynamic-table_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dynamic-table" tabindex="0" id="dynamic-table_previous"><a href="#">Previous</a></li><li class="paginate_button active" aria-controls="dynamic-table" tabindex="0"><a href="#">1</a></li><li class="paginate_button " aria-controls="dynamic-table" tabindex="0"><a href="#">2</a></li><li class="paginate_button " aria-controls="dynamic-table" tabindex="0"><a href="#">3</a></li><li class="paginate_button next" aria-controls="dynamic-table" tabindex="0" id="dynamic-table_next"><a href="#">Next</a></li></ul></div></div></div></div>
+											</table>
+												<div class="row">
+													<div class="col-xs-6">
+														<div class="dataTables_info" id="dynamic-table_info" role="status"
+															aria-live="polite">Showing 1 to 10 of 10 entries</div>
+													</div>
+													<div class="col-xs-6">
+														<div class="dataTables_paginate paging_simple_numbers"
+															id="dynamic-table_paginate">
+															<ul class="pagination">
+																<li class="paginate_button previous disabled"
+																	aria-controls="dynamic-table" tabindex="0"
+																	id="dynamic-table_previous"><a href="#">Previous</a></li>
+																<li class="paginate_button active" aria-controls="dynamic-table"
+																	tabindex="0"><a href="#">1</a></li>
+																<li class="paginate_button next" aria-controls="dynamic-table"
+																	tabindex="0" id="dynamic-table_next"><a href="#">Next</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 
+
+						<!--New row 2-->
+							<div class="row">
+									<div class="col-xs-12">
+										<div class="clearfix">
+												<div class="pull-right tableTools-container">
+												<div class="dt-buttons btn-overlap btn-group">
+													<a
+														class="dt-button buttons-copy buttons-html5 btn btn-white btn-primary btn-bold"
+														tabindex="0" aria-controls="dynamic-table" data-original-title=""
+														title=""><span><i class="fa fa-copy bigger-110 pink"></i>
+															<span class="hidden">Copy to clipboard</span></span></a><a
+														class="dt-button buttons-excel buttons-flash btn btn-white btn-primary btn-bold"
+														tabindex="0" aria-controls="dynamic-table"><span><i
+															class="fa fa-file-excel-o bigger-110 green"></i> <span
+															class="hidden">Export to Excel</span></span>
+													<div
+															style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;"
+															data-original-title="" title="">
+															<embed id="ZeroClipboard_TableToolsMovie_1"
+																src="assets/swf/flashExport.swf" loop="false" menu="false"
+																quality="best" bgcolor="#ffffff" width="39" height="35"
+																name="ZeroClipboard_TableToolsMovie_1" align="middle"
+																allowscriptaccess="always" allowfullscreen="false"
+																type="application/x-shockwave-flash"
+																pluginspage="http://www.macromedia.com/go/getflashplayer"
+																flashvars="id=1&amp;width=39&amp;height=35" wmode="transparent">
+														</div></a><a
+														class="dt-button buttons-pdf buttons-flash btn btn-white btn-primary btn-bold"
+														tabindex="0" aria-controls="dynamic-table"><span><i
+															class="fa fa-file-pdf-o bigger-110 red"></i> <span class="hidden">Export
+																to PDF</span></span>
+													<div
+															style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;"
+															data-original-title="" title="">
+															<embed id="ZeroClipboard_TableToolsMovie_2"
+																src="assets/swf/flashExport.swf" loop="false" menu="false"
+																quality="best" bgcolor="#ffffff" width="39" height="35"
+																name="ZeroClipboard_TableToolsMovie_2" align="middle"
+																allowscriptaccess="always" allowfullscreen="false"
+																type="application/x-shockwave-flash"
+																pluginspage="http://www.macromedia.com/go/getflashplayer"
+																flashvars="id=2&amp;width=39&amp;height=35" wmode="transparent">
+														</div></a>
+												</div>
+											</div>
+										</div>
+										<div class="table-header">
+											Lớp học 2
+										</div>
+
+										<!-- div.table-responsive -->
+
+										<!-- div.dataTables_borderWrap -->
+										<div>
+											<div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer"><div class="row"><div class="col-xs-6"><div class="dataTables_length" id="dynamic-table_length"><label>Display <select name="dynamic-table_length" aria-controls="dynamic-table" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> records</label></div></div><div class="col-xs-6"><div id="dynamic-table_filter" class="dataTables_filter"><label>Lọc:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dynamic-table"></label></div></div></div><table id="dynamic-table" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dynamic-table_info">
+												<thead>
+													<tr role="row"><th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="																																										
+														">
+															
+														</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Domain: activate to sort column ascending">Mã học viên</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">Tên học viên</th><th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">Ngày sinh</th><th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="
+															
+															Update
+														: activate to sort column ascending">
+															Địa chỉ
+														</th><th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Số CMND</th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label=""></th></tr>
+												</thead>
+
+												<tbody>
+													
+
+												<tr role="row" class="odd">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">1</a>
+														</td>
+														<td>Học viên 1</td>
+														<td class="hidden-480">17/09/1996</td>
+														<td>Quận 9 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															45141324
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="even">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">2</a>
+														</td>
+														<td>Học viên 1</td>
+														<td class="hidden-480">16/09/1996</td>
+														<td>Thủ đức TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															876757658
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="odd">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">3</a>
+														</td>
+														<td>Học viên 3</td>
+														<td class="hidden-480">18/09/1996</td>
+														<td>Quận 4 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															87657579
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="even">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">4</a>
+														</td>
+														<td>Học viên 4</td>
+														<td class="hidden-480">19/09/1996</td>
+														<td>Quận 8 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															87765875
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="odd">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">5</a>
+														</td>
+														<td>Học viên 5</td>
+														<td class="hidden-480">20/09/1996</td>
+														<td>Quận 1 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															578967578
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="even">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">6</a>
+														</td>
+														<td>Học viên 6</td>
+														<td class="hidden-480">21/09/1996</td>
+														<td>Quận 2 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															876968768
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="odd">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">7</a>
+														</td>
+														<td>Học viên 7</td>
+														<td class="hidden-480">22/09/1996</td>
+														<td>Quận 3 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															876987697
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="even">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">8</a>
+														</td>
+														<td>Học viên 8</td>
+														<td class="hidden-480">23/09/1996</td>
+														<td>Quận 4 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															8769695967
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="odd">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">9</a>
+														</td>
+														<td>Học viên 9</td>
+														<td class="hidden-480">24/09/1996</td>
+														<td>Quận 5 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															87689768
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr><tr role="row" class="even">
+														<td class="center">
+															<label class="pos-rel">
+																<input type="checkbox" class="ace">
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">10</a>
+														</td>
+														<td>Học viên 10</td>
+														<td class="hidden-480">30/09/1996</td>
+														<td>Quận 6 TP.Hồ Chí Minh</td>
+
+														<td class="hidden-480">
+															7697859876
+														</td>
+
+														<td>
+															<div class="hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class=""></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr></tbody>
+											</table>
+												<div class="row">
+													<div class="col-xs-6">
+														<div class="dataTables_info" id="dynamic-table_info" role="status"
+															aria-live="polite">Showing 1 to 10 of 10 entries</div>
+													</div>
+													<div class="col-xs-6">
+														<div class="dataTables_paginate paging_simple_numbers"
+															id="dynamic-table_paginate">
+															<ul class="pagination">
+																<li class="paginate_button previous disabled"
+																	aria-controls="dynamic-table" tabindex="0"
+																	id="dynamic-table_previous"><a href="#">Previous</a></li>
+																<li class="paginate_button active" aria-controls="dynamic-table"
+																	tabindex="0"><a href="#">1</a></li>
+																<li class="paginate_button next" aria-controls="dynamic-table"
+																	tabindex="0" id="dynamic-table_next"><a href="#">Next</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+						<!--End row 2-->
+						<div class="space-6">
+							
+						</div>
+						<div class="clearfix">
+							<button class="btn btn-yellow" style="float: right;width:10%;">Them Lop</button>
+							</div>
+						
 					</div>
-				
+						
+					</div><!--end padding div-->
+					
+					
+
 
 				</div><!--End content-->
 				

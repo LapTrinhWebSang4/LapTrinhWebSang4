@@ -34,12 +34,28 @@
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
     	<link rel="stylesheet" type="text/css" href="Asset/headercss.css">
+    	<style type="text/css">
+			.dropdown-submenu {
+				position: relative;
+			}
+
+			.dropdown-submenu>.dropdown-menu {
+				top: 0;
+				left: 100%;
+				margin-top: -1px;
+			}
+
+			.dropdown-submenu:hover>.dropdown-menu {
+				display: block;
+				position: absolute;
 
 
+			}
+		</style>
 		
 	</head>
-	<body>
-		<!--nav-->
+	<body class="no-skin">
+	<!--nav-->
 		<div id="navbar" class="navbar navbar-default          ace-save-state">
 			<img src="Asset/header ttth.jpg" style="width: 100%;height: 120px">
 			<div class="navbar-container ace-save-state" id="navbar-container">
@@ -65,50 +81,18 @@
 
 
 
-
-		<div class="main-container ace-save-state" id="main-container">
+<div class="main-container ace-save-state" id="main-container">
 			<script type="text/javascript">
 				try{ace.settings.loadState('main-container')}catch(e){}
 			</script>
 
 			<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
-				<script type="text/javascript">
+					<script type="text/javascript">
 					try{ace.settings.loadState('sidebar')}catch(e){}
 				</script>
-
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-					</div>
-
-					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-						<span class="btn btn-success"></span>
-
-						<span class="btn btn-info"></span>
-
-						<span class="btn btn-warning"></span>
-
-						<span class="btn btn-danger"></span>
-					</div>
-				</div><!-- /.sidebar-shortcuts -->
-
 				<ul class="nav nav-list">
 					<li class="">
-						<a href="index.html">
+						<a href="Dashboard.html">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
 						</a>
@@ -139,7 +123,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="typography.html">
+								<a href="chi tiet khoa hoc.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 1
 								</a>
@@ -148,7 +132,7 @@
 							</li>
 
 							<li class="">
-								<a href="typography.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 2
 								</a>
@@ -157,7 +141,7 @@
 							</li>
 
 							<li class="">
-								<a href="elements.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 3
 								</a>
@@ -166,7 +150,7 @@
 							</li>
 
 							<li class="">
-								<a href="buttons.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 4
 								</a>
@@ -175,7 +159,7 @@
 							</li>
 
 							<li class="">
-								<a href="content-slider.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 5
 								</a>
@@ -184,7 +168,7 @@
 							</li>
 
 							<li class="">
-								<a href="treeview.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 6
 								</a>
@@ -193,7 +177,7 @@
 							</li>
 
 							<li class="">
-								<a href="jquery-ui.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Khóa học 7
 								</a>
@@ -215,34 +199,34 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="tables.html">
+								<a href="Danh sach hoc vien.html">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Danh học viên khóa 1
+									Danh sách học viên khóa 1
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Danh học viên khóa 2
+									Danh sách học viên khóa 2
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Danh học viên khóa 3
+									Danh sách học viên khóa 3
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Danh học viên khóa 4
+									Danh sách học viên khóa 4
 								</a>
 
 								<b class="arrow"></b>
@@ -250,8 +234,8 @@
 						</ul>
 					</li>
 
-					<li class="">
-						<a href="#" class="dropdown-toggle">
+					<li class="active">
+						<a href="Gui mail.html">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text"> Gửi mail </span>
 
@@ -260,7 +244,7 @@
 					</li>
 
 					<li class="">
-						<a href="widgets.html">
+						<a href="Thong tin ca nhan.html">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text"> Thông tin cá nhân </span>
 						</a>
@@ -269,28 +253,14 @@
 					</li>
 
 					<li class="">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
-							<span class="menu-text">
-								Lịch
-
-								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-					<li class="">
-						<a href="">
+						<a href="Nhan tin.html">
 							<i class="menu-icon fa fa-envelope"></i>
 							<span class="menu-text"> Tin nhắn </span>
 						</a>
 
 						<b class="arrow"></b>
 					</li>
+			
 					<li class="">
 						<a href="">
 							<i class="menu-icon fa fa-sign-out"></i>
@@ -308,11 +278,35 @@
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 				</div>
+				
 			</div>
-
 			<div class="main-content" >
-				<div style="padding-left: 20px;padding-right: 20px;">
-					<div class="message-container">	
+				<div class="main-content-inner">
+					<div class="row">
+					<div class="container-fluid">
+						<ul class="nav nav-justified w3-pale-blue">
+							<li><a href="home.html">Trang chủ</a></li>
+							<li><a href="thongbao.html">Thông báo</a></li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Giới thiệu<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="thungo.html">Thư ngỏ</a></li>
+										<li><a href="giangvien.html">Đội ngủ giản viên</a></li>
+										<li><a href="nhiemvu.html">Chức năng nhiệm vụ</a></li>
+									</ul></li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Lịch khai giảng<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="Dangkiwindows-win.html">Windows 1 tháng 10</a></li>
+										<li><a href="Dangkiandroid-cban.html">Android 1 tháng 10</a></li>
+									</ul>
+								</li>
+								
+								<li><a href="tuvan-send.html">Tư vấn-hỏi đáp</a></li>
+								<li><a href="#">Đăng xuất</a></li>
+							</ul>						
+						</div>				
+					</div>
+					<div class="row" style="padding-top: 10px;padding-left: 30px;padding-right: 20px;">
+								<div class="message-container">	
 					<div id="id-message-new-navbar" class="message-navbar clearfix" style="height: 60px;border: solid 1px #a3eaf0">
 															<div>
 																<div class="messagebar-item-left">
@@ -368,8 +362,8 @@
 													Message:
 												</label>
 
-												<div class="col-sm-9">
-													<div class="wysiwyg-editor"></div>
+												<div class="col-sm-9">													
+														<textarea name="" id="input" class="form-control" rows="7" required="required"></textarea>
 												</div>
 											</div>
 
@@ -396,48 +390,20 @@
 										</div>
 									</form>
 					</div><!--End message container-->
-					</div>
+					</div>	
+					</div><!--end message content inner-->
+
+
+
 				
 
 				</div><!--End content-->
-				
-		</div><!-- /.main-container -->
+		</div> <!-- /.main-container -->
 
 
 
-
-		<div class="modal fade" id="myModal2" role="dialog">
-    			<div class="modal-dialog">
-    
-      			<!-- Modal content-->
-      				<div class="modal-content">
-        				<div class="modal-header">
-          					<button type="button" class="close" data-dismiss="modal">&times;</button>
-          					<h4 class="modal-title">Chọn khóa học cần gửi</h4>
-        				</div>
-        				<div class="modal-body">
-          					Tên khóa học :<select name="" id="input" class="form-control">
-          						<option value="">Khóa học 1</option>
-          						<option value="">Khóa học 2</option>
-          						<option value="">Khóa học 3</option>
-          						<option value="">Khóa học 4</option>
-          						<option value="">Khóa học 5</option>
-          					</select>
-          					<button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">OK</button>
-          						
-          				</div>
-          				<div class="modal-footer">
-          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        				</div>
-        			</div>
-        				
-     		 		</div>
-      
-    			</div>
-  			</div>
-
-
-		<!--Script-->
+		
+		<!--[if !IE]> -->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 
 		<!-- <![endif]-->
@@ -815,7 +781,7 @@
 
 
 
-		<!--End Script-->
 
+		<!--End Script-->
 	</body>
 </html>
