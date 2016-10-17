@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -58,6 +60,10 @@
 		
 	</head>
 	<body class="no-skin">
+	<!-- SQL Source -->
+	<sql:setDataSource var="con" driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://Localhost/ttth" user="root" password="kien2509" />
+	
 	<!--nav-->
 		<div id="navbar" class="navbar navbar-default          ace-save-state">
 			<img src="Asset/header ttth.jpg" style="width: 100%;height: 120px">
@@ -125,68 +131,13 @@
 
 								<b class="arrow"></b>
 							</li>
-							<li class="">
-								<a href="chi tiet khoa hoc.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 1
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 2
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 3
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 4
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 5
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 6
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 7
-								</a>
-
-								<b class="arrow"></b>
-							</li>
+							<sql:query var="result_khoahoc" sql="select * from khoahoc"
+							dataSource="${con }" />
+						<c:forEach var="rowsss" items="${result_khoahoc.rows }">
+							<li class=""><a href="chi tiet khoa hoc.html"> <i
+								class="menu-icon fa fa-caret-right"></i> ${rowsss.TenKhoaHoc }
+						</a> <b class="arrow"></b></li>
+						</c:forEach>
 						</ul>
 					</li>
 
@@ -321,7 +272,7 @@
 
 																<div class="messagebar-item-right">
 																	<span class="inline btn-send-message">
-																		<button type="button" class="btn btn-sm btn-primary no-border btn-white btn-round">
+																		<button type="submit" id="btn-send" class="btn btn-sm btn-primary no-border btn-white btn-round">
 																			<span class="bigger-110">Send</span>
 
 																			<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
@@ -350,10 +301,10 @@
 												<label class="col-sm-3 control-label no-padding-right" for="form-field-subject">Subject:</label>
 
 												<div class="col-sm-6 col-xs-12">
-													<div class="input-icon block col-xs-12 no-padding">
+													<span class="input-icon block col-xs-12 no-padding">
 														<input maxlength="100" type="text" class="col-xs-12" name="subject" id="form-field-subject" placeholder="Subject" />
 														<i class="ace-icon fa fa-comment-o"></i>
-													</div>
+													</span>
 												</div>
 											</div>
 
@@ -781,6 +732,42 @@
 			
 			});
 		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">
+			function validateText(id){
+				if($("#"+id).val()==null||$("#"+id).val()==""){
+					var span = $("#"+id).closest("span");
+					span.removeClass("has-success");
+					$("#glypcn"+id).remove();
+					span.addClass("has-error has-feedback");
+					span.append('<span id="glypcn'+id+'"class="glyphicon glyphicon-remove form-control-feedback"></span>');
+					return false;
+				}
+				else{
+					var span = $("#"+id).closest("span");					
+					span.removeClass("has-error");
+					span.addClass("has-success has-feedback");
+					$("#glypcn"+id).remove();
+					span.append('<span id="glypcn'+id+'"class="glyphicon glyphicon-ok form-control-feedback"></span>');
+					return true;
+				}
+			}
+			$(document).ready(
+					function(){
+						$("#btn-send").click(function(){
+							if(!validateText("form-field-recipient")){
+								return false;
+							}
+							if(!validateText("form-field-subject")){
+								return false;
+							}							
+						});
+					}
+					);
+			</script>
+		
 
 
 

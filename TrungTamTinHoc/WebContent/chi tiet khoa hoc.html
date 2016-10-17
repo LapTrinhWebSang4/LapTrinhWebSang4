@@ -393,6 +393,7 @@
           <!--End Modal1-->
 
           <!--Modal2-->
+    <form id="sua_form" method="post" action="" role="form" >
         <div class="modal fade" id="myModal2" role="dialog">
           <div class="modal-dialog">
     
@@ -403,18 +404,31 @@
                     <h4 class="modal-title">Sửa khóa học</h4>
                 </div>
                 <div class="modal-body">
-                    Khóa học ID :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    Tên khóa học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    Giới thiệu :<textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
-                    Học phí:<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    Chế độ miễn giảm :<select name="" id="tuoi-quyen" class="form-control">
-                      <option value="">-- Select One --</option>
-                      <option value="Tư vấn viên">Miễn giảm sinh viên trường</option>
-                      <option value="Người quản trị nội dung">Miễn giảm cho học viên đăng ký nhiều khóa học</option>
-                    </select>
-                    Ngày khai giảng :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
-                    Lịch học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    <button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Lưu</button>
+                    <div class="form-group">
+                    	<label for="input_id">Khóa học ID :</label>
+                    	<input type="text" name="" id="input_id" class="form-control" value="" required="required" pattern="" title="">
+                    </div>
+                    <div class="form-group">
+                    	<label for="input_id">Tên khóa học :</label>
+                    	<input type="text" name="" id="input_tenkh" class="form-control" value="" required="required" pattern="" title="">
+                    </div>
+                    <div class="form-group">
+                    	<label for="input_id">Giới thiệu :</label>
+                    	<textarea name="" id="input_textarea" class="form-control" rows="3" required="required"></textarea>
+                    </div>
+                  	<div class="form-group">
+                  		<label for="input_id">Chế độ miễn giảm :</label>
+                  		<input type="text" name="" id="input_cdmg" class="form-control" value="" required="required" pattern="" title="">
+                  	</div>
+                  	<div class="form-group">
+                  		<label for="input_id">Ngày khai giảng :</label>
+                  		<input type="email" name="" id="input_nkg" class="form-control" value="" required="required" title="">
+                  	</div>
+                  	<div class="form-group">
+                  		<label for="input_id">Mã Loại :</label>
+                  		<input type="email" name="" id="input_ml" class="form-control" value="" required="required" title="">
+                  	</div>                                                   	
+                    <button type="button" class="btn btn-primary" id="button-modal2"  style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Lưu</button>
                       
                   </div>
                   <div class="modal-footer">
@@ -425,6 +439,7 @@
             </div>
       
           </div>
+          </form>
           <!--End Modal2-->
 
 
@@ -467,7 +482,46 @@
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-
+		<script type="text/javascript">
+			function validateText(id){
+				if($("#"+id).val()==null||$("#"+id).val()==""){
+					var div =$("#"+id).closest(div);
+					div.removeClass("has-success");
+					$("#glypcn"+id).remove();
+					div.addClass("has-error has-feedback");
+					div.append('<span id="glypcn'+id+'"class="glyphicon glyphicon-remove form-control-feedback"></span>')
+					return false;
+				}
+				else{
+					var div = $("#"+id).closest("div");
+					div.removeClass("has-error");
+					div.addClass("has-success has-feedback");
+					$("#glypcn"+id).remove();
+					div.append('<span id="glypcn'+id+'"class="glyphicon glyphicon-ok form-control-feedback"></span>')
+					return true;
+				}
+			}
+			$(document).ready(){
+				fuction(){
+					$("#button-modal2").click(function(){
+						if(!validateText("input_id")){
+							return false;
+						}
+						if(!validateText("input_tenkh")){
+							return false;
+						}
+						if(!validateText("input_nkg")){
+							return false;
+						}
+						if(!validateText("input_ml")){
+							return false;
+						}
+						$("#sua_form").submit();
+					})
+				}
+			}
+			</script>
+		
 
 
 		

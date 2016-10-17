@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -66,6 +68,7 @@
 
 		<!-- ace settings handler -->
 		<script src="assets/js/ace-extra.min.js"></script>
+		
 
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -77,6 +80,18 @@
 		
 	</head>
 	<body class="no-skin">
+	<!-- SQL statement -->
+	<sql:setDataSource var="con" driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://Localhost/ttth" user="root" password="kien2509" />
+	<sql:query var="result_cauhoi1" sql="select * from cauhoi where TinhTrang=1"
+		dataSource="${con }" />
+	<sql:query var="result_cauhoi0" sql="select * from cauhoi where TinhTrang=0"
+		dataSource="${con }" />
+	<!-- End SQL statement -->
+	
+	
+	
+	
 	<!--nav-->
 		<div id="navbar" class="navbar navbar-default          ace-save-state">
 			<img src="Asset/header ttth.jpg" style="width: 100%;height: 120px">
@@ -138,68 +153,14 @@
 
 								<b class="arrow"></b>
 							</li>
-							<li class="">
-								<a href="chi tiet khoa hoc.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 1
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="typography.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 2
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="elements.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 3
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="buttons.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 4
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="content-slider.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 5
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="treeview.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 6
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="jquery-ui.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 7
-								</a>
-
-								<b class="arrow"></b>
-							</li>
+							<sql:query var="result_khoahoc" sql="select * from khoahoc"
+							dataSource="${con }" />
+						<c:forEach var="rowsss" items="${result_khoahoc.rows }">
+							<li class=""><a href="chi tiet khoa hoc.html"> <i
+								class="menu-icon fa fa-caret-right"></i> ${rowsss.TenKhoaHoc }
+						</a> <b class="arrow"></b></li>
+						</c:forEach>
+		
 						</ul>
 					</li>
 
@@ -484,34 +445,60 @@
 														<thead class="thin-border-bottom">
 															<tr>
 																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>Họ tên
-																</th>
-
-																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>Chủ đề
+																	<i class="ace-icon fa fa-caret-right blue"></i>Tên người hỏi
 																</th>
 
 																<th class="hidden-480">
 																	<i class="ace-icon fa fa-caret-right blue"></i>Nội dung
 																</th>
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Lĩnh vực
+																</th>
+																
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Email người hỏi
+																</th>
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Ngày hỏi
+																</th>
+																<th>
+																	<i class=""></i>
+																</th>																
 															</tr>
 														</thead>
 
 														<tbody>
-															<tr>
-																<td><small>Lệ Thị Riêng</small></td>
+															<c:forEach var="rowss" items="${result_cauhoi0.rows }">
+																<tr>
+																<td><small>${rowss.TenNguoiHoi}</small></td>
 
 																<td>
 																	<small>
-																		<b class="green">Chứng chỉ</b>
+																		<b class="green">${rowss.NoiDung}</b>
 																	</small>
 																	
 																</td>
-
 																<td>
 																	<small>
-																		<b class="blue"> Hạn sử dụng chứng chỉ ...</b>
+																		<b class="green">${rowss.LinhVuc}</b>
 																	</small>
+																	
+																</td>
+																<td>
+																	<small>
+																		<b class="green">${rowss.EmailNguoiHoi}</b>
+																	</small>
+																	
+																</td>
+																<td>
+																	<small>
+																		<b class="green">${rowss.Ngay}</b>
+																	</small>
+																	
+																</td>
+																
+
+																<td>																	
 																	<div class="pull-right action-buttons">
 																		<a href="#" class="blue">
 																			<i class="ace-icon fa fa-pencil bigger-130"></i>
@@ -531,143 +518,7 @@
 																	
 																</td>
 															</tr>
-
-															<tr>
-																<td><small>Lê Văn A</small></td>
-
-																<td>
-																	<small>
-																		<b class="green">Chương trình ưu đãi</b>
-																	</small>
-																</td>
-
-																<td >
-																	<small>
-																		<b class="blue">Ưu đãi dành cho sinh viên ...?</b>
-																	</small>
-																	<div class="pull-right action-buttons">	
-																	<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-															
-																	<span class="vbar"></span>
-
-																		<a href="#">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
-
-															<tr>
-																<td><small>Trần B</small></td>
-
-																<td>
-																	<small>
-																		<b class="green">Chất lượng giảng dạy</b>
-																	</small>
-																	
-																</td>
-
-																<td>
-																	<small>
-																		<b class="blue">Chất lượng giảng viên của...?</b>
-																	</small>
-																	<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="green">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
-
-															<tr>
-																<td><small>Hoàng Văn K</small></td>
-
-																<td>
-																	<small>
-																		<b class="green">Cơ sở vật chất</b>
-																	</small>
-																	
-																</td>
-
-																<td>
-																<small>
-																	<b class="blue">Cơ sở vật chất của trung tâm...?</b>
-																</small>
-																<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-																		<a href="#" class="green">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
-
-															<tr>
-																<td><small>Đỗ Thị H</small></td>
-
-																<td>
-																<small>
-																	<b class="green">Các đối tác</b>
-																</small>
-																	
-																</td>
-
-																<td>
-																<small>
-																	<b class="blue">Trung tâm có hợp tác với...?</b>
-																</small>
-																<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-																		<a href="#">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
+															</c:forEach>
 														</tbody>
 													</table>
 												</div><!-- /.widget-main -->
@@ -689,113 +540,74 @@
 												</h4>
 
 												<div class="widget-toolbar"  id="">
-													<a href="#">
-														<i class="ace-icon fa fa-chevron-up" id="arrow"></i>
+													<a href="#" id="clickhere1">
+														<i class="ace-icon fa fa-chevron-up" id="arrow1"></i>
 													</a>
 												</div>
 											</div>
 
-											<div class="widget-body" id="">
+											<div class="widget-body" id="danh-sach-cau-hoi-da-tra-loi">
 												<div class="widget-main no-padding">
 													<table class="table table-bordered table-striped">
 														<thead class="thin-border-bottom">
 															<tr>
 																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>Họ tên
-																</th>
-
-																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>Chủ đề
+																	<i class="ace-icon fa fa-caret-right blue"></i>Tên người hỏi
 																</th>
 
 																<th class="hidden-480">
 																	<i class="ace-icon fa fa-caret-right blue"></i>Nội dung
 																</th>
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Lĩnh vực
+																</th>
+																
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Email người hỏi
+																</th>
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Ngày hỏi
+																</th>
+																<th>
+																	<i class="ace-icon fa fa-caret-right blue"></i>Trả lời
+																</th>
 															</tr>
 														</thead>
-
-														<tbody>
-															<tr>
-																<td><small>Lệ Thị Riêng</small></td>
-
-																<td>
-																	<small>
-																		<b class="green">Chứng chỉ</b>
-																	</small>
-																	
-																</td>
-
-																<td>
-																	<small>
-																		<b class="blue"> Hạn sử dụng chứng chỉ ...</b>
-																	</small>
-																	<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-																		<a href="#" class="green">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
-
-															<tr>
-																<td><small>Lê Văn A</small></td>
-
-																<td>
-																	<small>
-																		<b class="green">Chương trình ưu đãi</b>
-																	</small>
-																</td>
-
-																<td >
-																	<small>
-																		<b class="blue">Ưu đãi dành cho sinh viên ...?</b>
-																	</small>
-																	<div class="pull-right action-buttons">	
-																	<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
 															
-																	<span class="vbar"></span>
-
-																		<a href="#">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
-
-															<tr>
-																<td><small>Trần B</small></td>
+														<tbody>
+															<c:forEach var="rows" items="${result_cauhoi1.rows }">
+																		<tr>
+																<td><small>${rows.TenNguoiHoi}</small></td>
 
 																<td>
 																	<small>
-																		<b class="green">Chất lượng giảng dạy</b>
+																		<b class="green">${rows.NoiDung}</b>
 																	</small>
 																	
 																</td>
+																<td>
+																	<small>
+																		<b class="green">${rows.LinhVuc}</b>
+																	</small>
+																	
+																</td>
+																<td>
+																	<small>
+																		<b class="green">${rows.EmailNguoiHoi}</b>
+																	</small>
+																	
+																</td>
+																<td>
+																	<small>
+																		<b class="green">${rows.Ngay}</b>
+																	</small>
+																	
+																</td>
+																
 
 																<td>
 																	<small>
-																		<b class="blue">Chất lượng giảng viên của...?</b>
+																		<b class="blue">${rows.TraLoi}</b>
 																	</small>
 																	<div class="pull-right action-buttons">
 																		<a href="#" class="blue">
@@ -809,7 +621,6 @@
 																		</a>
 
 																		<span class="vbar"></span>
-
 																		<a href="#" class="green">
 																			<i class="ace-icon fa fa-flag bigger-130"></i>
 																		</a>
@@ -817,74 +628,8 @@
 																	
 																</td>
 															</tr>
-
-															<tr>
-																<td><small>Hoàng Văn K</small></td>
-
-																<td>
-																	<small>
-																		<b class="green">Cơ sở vật chất</b>
-																	</small>
-																	
-																</td>
-
-																<td>
-																<small>
-																	<b class="blue">Cơ sở vật chất của trung tâm...?</b>
-																</small>
-																<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-																		<a href="#" class="green">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
-
-															<tr>
-																<td><small>Đỗ Thị H</small></td>
-
-																<td>
-																<small>
-																	<b class="green">Các đối tác</b>
-																</small>
-																	
-																</td>
-
-																<td>
-																<small>
-																	<b class="blue">Trung tâm có hợp tác với...?</b>
-																</small>
-																<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-																		<a href="#">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																	
-																</td>
-															</tr>
+															</c:forEach>
+													
 														</tbody>
 													</table>
 												</div><!-- /.widget-main -->
@@ -906,17 +651,21 @@
 		</div> <!-- /.main-container -->
 
 
-<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="assets/js/bootstrap.min.js"></script>
+		
+
+		
+
+		
+		
+		 
 
 		<!-- page specific plugin scripts -->
 
@@ -930,6 +679,46 @@
 		<script src="assets/js/jquery.flot.min.js"></script>
 		<script src="assets/js/jquery.flot.pie.min.js"></script>
 		<script src="assets/js/jquery.flot.resize.min.js"></script>
+		<script type="text/javascript">
+    		$(document).ready(function(){
+    			$("#clickhere").click(function(event) {
+        			if($("#arrow").prop('class') == "ace-icon fa fa-chevron-up"){
+        				$("#arrow").removeClass('ace-icon fa fa-chevron-up');
+        				$("#arrow").addClass('ace-icon fa fa-chevron-down');
+        				$("#danh-sach-cau-hoi-cho-tra-loi").slideToggle("fast");
+        				return false;
+        			}
+        			else{
+        				$("#arrow").removeClass('ace-icon fa fa-chevron-down');
+        				$("#arrow").addClass('ace-icon fa fa-chevron-up');
+        				$("#danh-sach-cau-hoi-cho-tra-loi").slideToggle("fast");
+        				return false;
+
+        			}
+        			
+        			
+        		});
+    			$("#clickhere1").click(function(event) {
+        			if($("#arrow1").prop('class') == "ace-icon fa fa-chevron-up"){
+        				$("#arrow1").removeClass('ace-icon fa fa-chevron-up');
+        				$("#arrow1").addClass('ace-icon fa fa-chevron-down');
+        				$("#danh-sach-cau-hoi-da-tra-loi").slideToggle("fast");
+        				return false;
+        			}
+        			else{
+        				$("#arrow1").removeClass('ace-icon fa fa-chevron-down');
+        				$("#arrow1").addClass('ace-icon fa fa-chevron-up');
+        				$("#danh-sach-cau-hoi-da-tra-loi").slideToggle("fast");
+        				return false;
+
+        			}
+    			});
+    		});
+    			
+    		
+    	</script>
+		
+		
 
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
@@ -1154,12 +943,15 @@
 			
 			})
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    	<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
 		<script type="text/javascript">
-    		$("#clickhere").click(function(event) {
-    			$("danh-sach-cau-hoi-cho-tra-loi").slideUp(slow);
-    		});
-    	</script>
-		 
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		
 
 
     	

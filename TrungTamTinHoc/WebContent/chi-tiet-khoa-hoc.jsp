@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -32,7 +34,7 @@
 
 		<!-- ace settings handler -->
 		<script src="assets/js/ace-extra.min.js"></script>
-
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
@@ -61,6 +63,10 @@
 		
 	</head>
 	<body class="no-skin">
+	
+	<!-- SQL source -->
+	<sql:setDataSource var="con" driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://Localhost/ttth" user="root" password="kien2509" />
 
 
 	<!--nav-->
@@ -124,68 +130,13 @@
 
 								<b class="arrow"></b>
 							</li>
-							<li class="active">
-								<a href="">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 1
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="typography.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 2
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="elements.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 3
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="buttons.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 4
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="content-slider.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 5
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="treeview.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 6
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="jquery-ui.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Khóa học 7
-								</a>
-
-								<b class="arrow"></b>
-							</li>
+								<sql:query var="result_khoahoc" sql="select * from khoahoc"
+							dataSource="${con }" />
+						<c:forEach var="rowsss" items="${result_khoahoc.rows }">
+							<li class=""><a href="chi tiet khoa hoc.html"> <i
+								class="menu-icon fa fa-caret-right"></i> ${rowsss.TenKhoaHoc }
+						</a> <b class="arrow"></b></li>
+						</c:forEach>
 						</ul>
 					</li>
 
@@ -349,6 +300,8 @@
 						
 					</div><!--end col sm 6-->
 				</div><!--End row-->				
+				
+				
 					
 				</div><!--End main content inner-->
 
@@ -396,6 +349,7 @@
           <!--End Modal1-->
 
           <!--Modal2-->
+        
         <div class="modal fade" id="myModal2" role="dialog">
           <div class="modal-dialog">
     
@@ -406,19 +360,35 @@
                     <h4 class="modal-title">Sửa khóa học</h4>
                 </div>
                 <div class="modal-body">
-                    Khóa học ID :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    Tên khóa học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    Giới thiệu :<textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
-                    Học phí:<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    Chế độ miễn giảm :<select name="" id="tuoi-quyen" class="form-control">
-                      <option value="">-- Select One --</option>
-                      <option value="Tư vấn viên">Miễn giảm sinh viên trường</option>
-                      <option value="Người quản trị nội dung">Miễn giảm cho học viên đăng ký nhiều khóa học</option>
-                    </select>
-                    Ngày khai giảng :<input type="email" name="" id="input" class="form-control" value="" required="required" title="">
-                    Lịch học :<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                    <button type="button" class="btn btn-primary" style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Lưu</button>
-                      
+                	<form id="sua_form" method="post" action="" role="form" >
+                    <div class="form-group">
+                    	<label for="input_id">Khóa học ID :</label>
+                    	<input type="text" name="" id="input_id" class="form-control" value="" required="required" pattern="" title="">
+                    </div>
+                    <div class="form-group">
+                    	<label for="input_id">Tên khóa học :</label>
+                    	<input type="text" name="" id="input_tenkh" class="form-control" value="" required="required" pattern="" title="">
+                    </div>
+                    <div class="form-group">
+                    	<label for="input_id">Giới thiệu :</label>
+                    	<textarea name="" id="input_textarea" class="form-control" rows="3" required="required"></textarea>
+                    </div>
+                  	<div class="form-group">
+                  		<label for="input_id">Chế độ miễn giảm :</label>
+                  		<input type="text" name="" id="input_cdmg" class="form-control" value="" required="required" pattern="" title="">
+                  	</div>
+                  	<div class="form-group">
+                  		<label for="input_id">Ngày khai giảng :</label>
+                  		<input type="email" name="" id="input_nkg" class="form-control" value="" required="required" title="">
+                  	</div>
+                  	<div class="form-group">
+                  		<label for="input_id">Mã Loại :</label>
+                  		<input type="email" name="" id="input_ml" class="form-control" value="" required="required" title="">
+                  	</div>                                                   	
+                    <button type="submit" class="btn btn-primary" id="button-modal2"  style="text-align: center;width: 120px;margin-left: 450px;margin-top: 10px">Lưu</button>
+                     </form>
+				
+				
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -428,6 +398,7 @@
             </div>
       
           </div>
+          
           <!--End Modal2-->
 
 
@@ -464,12 +435,52 @@
 		<!--Script-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">
+			function validateText(id){
+				if($("#"+id).val()==null||$("#"+id).val()==""){
+					var div =$("#"+id).closest("div");
+					div.removeClass("has-success");
+					$("#glypcn"+id).remove();
+					div.addClass("has-error has-feedback");
+					div.append('<span id="glypcn'+id+'"class="glyphicon glyphicon-remove form-control-feedback"></span>');
+					return false;
+				}
+				else{
+					var div = $("#"+id).closest("div");
+					div.removeClass("has-error");
+					div.addClass("has-success has-feedback");
+					$("#glypcn"+id).remove();
+					div.append('<span id="glypcn'+id+'"class="glyphicon glyphicon-ok form-control-feedback"></span>');
+					return true;
+				}
+			}
+			$(document).ready(
+					function(){
+						$("#button-modal2").click(function(){
+							if(!validateText("input_id")){
+								return false;
+							}
+							if(!validateText("input_tenkh")){
+								return false;
+							}
+							if(!validateText("input_nkg")){
+								return false;
+							}
+							if(!validateText("input_ml")){
+								return false;
+							}
+						});
+					}
+					);
+			</script>
     	<script type="text/javascript" src="js/bootstrap.min.js"></script>
     	<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
+		
+			
 
 
 
